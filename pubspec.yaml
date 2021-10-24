@@ -37,8 +37,10 @@ dependencies:
   page_transition: ^2.0.4
   bloc: ^7.2.1
   flutter_bloc: ^7.3.1
+  cloud_functions: ^3.0.5
 
 dev_dependencies:
+  flutter_native_splash: ^1.2.4
   flutter_test:
     sdk: flutter
 
@@ -48,10 +50,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_native_splash:
+  image: lib/assets/logo/Oblio.png
+  color: "ffffff"
 # The following section is specific to Flutter.
 flutter:
 
