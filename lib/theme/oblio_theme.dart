@@ -1,0 +1,308 @@
+import 'package:flutter/material.dart';
+import './colors.dart';
+
+final ThemeData oblioTheme = ThemeData(
+  //primarySwatch: CompanyColors.primary[500]!,
+  brightness: Brightness.light,
+  primaryColor: CompanyColors.primary[500],
+  primaryColorBrightness: Brightness.dark,
+  primaryColorLight: CompanyColors.primary[500],
+  primaryColorDark: CompanyColors.font_primary[500],
+  // deprecated. accentColor: CompanyColors.font_secondary[87],
+  //deprecated. accentColorBrightness: Brightness.dark,
+  canvasColor: CompanyColors.primary[500],
+  scaffoldBackgroundColor: CompanyColors.secondary[500],
+  bottomAppBarColor: CompanyColors.font_secondary[100],
+  cardColor: CompanyColors.primary[50],
+  dividerColor: CompanyColors.font_secondary[10],
+  highlightColor: CompanyColors.font_secondary[87],
+  splashColor: CompanyColors.font_secondary[87],
+  selectedRowColor: CompanyColors.font_secondary[87],
+  unselectedWidgetColor: CompanyColors.font_secondary[87],
+  disabledColor: CompanyColors.font_secondary[87],
+  // deprecated! buttonColor: CompanyColors.font_secondary[87],
+  toggleableActiveColor: CompanyColors.font_secondary[87],
+  secondaryHeaderColor: CompanyColors.font_secondary[87],
+  // deprecated! textSelectionColor: CompanyColors.font_primary[54],
+  // deprecated! textSelectionHandleColor: CompanyColors.font_primary[54],
+  backgroundColor: CompanyColors.primary[500],
+  dialogBackgroundColor: CompanyColors.font_secondary[87],
+  indicatorColor: CompanyColors.font_secondary[87],
+  hintColor: CompanyColors.font_secondary[87],
+  errorColor: CompanyColors.font_secondary[87],
+  textSelectionTheme: TextSelectionThemeData(
+    cursorColor: CompanyColors.red[500],
+  ),
+
+  // Button Theme
+  textButtonTheme: TextButtonThemeData(
+    style: ButtonStyle(
+        overlayColor: MaterialStateProperty.resolveWith(
+            (states) => CompanyColors.primary[50]),
+        textStyle: MaterialStateProperty.all(
+          TextStyle(
+            fontSize: 14,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.normal,
+            color: CompanyColors.font_primary[100],
+          ),
+        ),
+        side: MaterialStateProperty.resolveWith(
+          (states) => BorderSide(
+              color: CompanyColors.font_primary[50]!,
+              width: 1,
+              style: BorderStyle.solid),
+        ),
+        backgroundColor: MaterialStateProperty.resolveWith(
+            (states) => CompanyColors.primary[50]),
+        splashFactory: NoSplash.splashFactory),
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+        elevation: MaterialStateProperty.resolveWith((states) => 0),
+        textStyle: MaterialStateProperty.all(
+          TextStyle(
+            fontSize: 14,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.normal,
+            color: CompanyColors.font_primary[100],
+          ),
+        ),
+        backgroundColor: MaterialStateProperty.resolveWith(
+            (states) => CompanyColors.red[500]),
+        splashFactory: NoSplash.splashFactory),
+  ),
+
+  // Text Theme
+  textTheme: TextTheme(
+    headline1: TextStyle(
+        color: CompanyColors.font_primary[87],
+        fontSize: 24.0,
+        fontWeight: FontWeight.w600,
+        fontFamily: "Poppins"),
+    headline2: TextStyle(
+        color: CompanyColors.font_primary[87],
+        fontSize: 20.0,
+        fontWeight: FontWeight.w500,
+        fontFamily: "Poppins"),
+    headline5: TextStyle(
+      color: CompanyColors.font_secondary[87],
+      fontSize: 16,
+      fontWeight: FontWeight.normal,
+      fontStyle: FontStyle.normal,
+    ),
+    subtitle1: TextStyle(
+      color: CompanyColors.font_primary[40],
+      fontSize: 16,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+    caption: TextStyle(
+      color: CompanyColors.font_primary[100],
+      fontSize: null,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    ),
+    button: TextStyle(
+      color: CompanyColors.font_primary[90],
+      fontSize: 14,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+    overline: TextStyle(
+      color: CompanyColors.font_primary[40],
+      fontSize: 12,
+      letterSpacing: 0.2,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+  ),
+
+  //
+  primaryTextTheme: TextTheme(
+    headline1: TextStyle(
+        color: CompanyColors.font_primary[87],
+        fontSize: 30.0,
+        fontWeight: FontWeight.normal,
+        fontFamily: "Poppins"),
+    headline4: TextStyle(
+      color: CompanyColors.font_primary[60],
+      fontSize: 11,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+    headline5: TextStyle(
+      color: CompanyColors.font_secondary[50],
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontFamily: "Poppins",
+    ),
+    subtitle1: TextStyle(
+      color: CompanyColors.font_primary[60],
+      fontSize: 17,
+      fontFamily: "Poppins",
+      fontWeight: FontWeight.normal,
+      fontStyle: FontStyle.normal,
+    ),
+    caption: TextStyle(
+      color: CompanyColors.font_primary[100],
+      fontSize: null,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    ),
+    button: TextStyle(
+      color: CompanyColors.primary[50],
+      fontSize: 14,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+  ),
+
+  //input theme
+  inputDecorationTheme: InputDecorationTheme(
+    labelStyle: TextStyle(
+        color: CompanyColors.font_primary[60],
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        fontStyle: FontStyle.normal,
+        fontFamily: "Poppins"),
+    filled: true,
+    fillColor: CompanyColors.secondary[50],
+    border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: BorderSide(
+            color: CompanyColors.font_primary[50]!,
+            width: 1,
+            style: BorderStyle.solid)),
+    focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: BorderSide(
+            color: CompanyColors.font_primary[50]!,
+            width: 1,
+            style: BorderStyle.solid)),
+    focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: BorderSide(
+            color: CompanyColors.font_primary[50]!,
+            width: 1,
+            style: BorderStyle.solid)),
+    enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: BorderSide(
+            color: CompanyColors.font_primary[50]!,
+            width: 1,
+            style: BorderStyle.solid)),
+    errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: BorderSide(
+            color: CompanyColors.red[500]!,
+            width: 1,
+            style: BorderStyle.solid)),
+    contentPadding: EdgeInsets.all(10),
+    errorStyle: TextStyle(
+        backgroundColor: CompanyColors.secondary[50],
+        color: CompanyColors.red[500]!,
+        fontSize: 12,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w300),
+  ),
+
+  // checkbox theme
+
+  checkboxTheme: CheckboxThemeData(
+      fillColor:
+          MaterialStateColor.resolveWith((states) => CompanyColors.red[500]!),
+      side: BorderSide(
+          color: CompanyColors.red[500]!, width: 1, style: BorderStyle.solid)),
+
+  // icon theme
+  iconTheme: IconThemeData(
+    color: CompanyColors.font_secondary[54],
+    opacity: 1,
+    size: 24,
+  ),
+  primaryIconTheme: IconThemeData(
+    color: CompanyColors.font_secondary[54],
+    opacity: 1,
+    size: 24,
+  ),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    foregroundColor: CompanyColors.primary[500],
+    backgroundColor: CompanyColors.orange[500],
+    focusColor: CompanyColors.orange[300],
+    hoverColor: CompanyColors.orange[600],
+    splashColor: CompanyColors.red[400],
+  ),
+  sliderTheme: SliderThemeData(
+    activeTrackColor: null,
+    inactiveTrackColor: null,
+    disabledActiveTrackColor: null,
+    disabledInactiveTrackColor: null,
+    activeTickMarkColor: null,
+    inactiveTickMarkColor: null,
+    disabledActiveTickMarkColor: null,
+    disabledInactiveTickMarkColor: null,
+    thumbColor: null,
+    disabledThumbColor: null,
+    overlayColor: null,
+    valueIndicatorColor: null,
+    showValueIndicator: null,
+    valueIndicatorTextStyle: TextStyle(
+      color: CompanyColors.font_primary[50],
+      fontSize: null,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    ),
+  ),
+  tabBarTheme: TabBarTheme(
+    indicatorSize: TabBarIndicatorSize.tab,
+    labelColor: CompanyColors.font_primary[100],
+    unselectedLabelColor: CompanyColors.font_primary[54],
+  ),
+  chipTheme: ChipThemeData(
+    backgroundColor: Color(0xffDFDFDF),
+    brightness: Brightness.light,
+    deleteIconColor: CompanyColors.primary[50],
+    disabledColor: CompanyColors.primary[50]!,
+    labelPadding: EdgeInsets.fromLTRB(00.0, 0.0, 00.0, 0.0),
+    labelStyle: TextStyle(
+      color: CompanyColors.font_primary[38],
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      fontStyle: FontStyle.normal,
+    ),
+    padding: EdgeInsets.fromLTRB(15.0, 8.0, 15.0, 8.0),
+    secondaryLabelStyle: TextStyle(
+      color: Color(0x3d6100ED),
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      fontStyle: FontStyle.normal,
+    ),
+    secondarySelectedColor: Color(0x3d2196f3),
+    selectedColor: Color(0xddD6C4F9),
+    shape: StadiumBorder(
+        side: BorderSide(
+      color: CompanyColors.primary[50]!,
+      width: 0,
+      style: BorderStyle.none,
+    )),
+  ),
+  dialogTheme: DialogTheme(
+      shape: RoundedRectangleBorder(
+    side: BorderSide(
+      color: CompanyColors.primary[50]!,
+      width: 0,
+      style: BorderStyle.none,
+    ),
+    borderRadius: BorderRadius.all(Radius.circular(0.0)),
+  )),
+  cardTheme: CardTheme(
+    color: CompanyColors.primary[50],
+    shadowColor: Colors.transparent,
+  ),
+);

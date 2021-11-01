@@ -11,7 +11,7 @@ body, html {
   position: absolute;
   top: 45%;
   left: 50%;
-  height: 100px;
+  height: 50px;
   width: auto;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

@@ -2,19 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/app.dart';
 import 'package:oblio/routes/routes.dart';
-import 'package:oblio/state/theme/theme_cubit.dart';
-import 'package:oblio/theme/dark.dart';
-import 'package:oblio/theme/light.dart';
+import 'package:oblio/state/password/password_cubit.dart';
+import 'package:oblio/state/privacy/privacy_cubit.dart';
+import 'package:oblio/state/remember-me-checkbox/rememberme_cubit.dart';
+import 'package:oblio/state/terms/terms_cubit.dart';
+import 'package:oblio/theme/oblio_theme.dart';
 
-void main() => runApp(BlocConsumer<ThemeCubit, bool>(
-      listener: (context, state) {},
-      builder: (context, state) {
-        var dynamicTheme = state == true ? darkMode : lightMode;
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: App(),
-          theme: dynamicTheme,
-          onGenerateRoute: Routes.generateRoute,
-        );
-      },
-    ));
+void main() {
+  runApp(MultiBlocProvider(
+    providers: [
+      BlocProvider<PasswordCubit>(
+        create: (BuildContext context) => PasswordCubit(),
+      ),
+      BlocProvider<RemembermeCubit>(
+        create: (BuildContext context) => RemembermeCubit(),
+      ),
+      BlocProvider<TermsCubit>(
+        create: (BuildContext context) => TermsCubit(),
+      ),
+      BlocProvider<PrivacyCubit>(
+        create: (BuildContext context) => PrivacyCubit(),
+      ),
+    ],
+    child: MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: App(),
+      theme: oblioTheme,
+      onGenerateRoute: Routes.generateRoute,
+    ),
+  ));
+}
