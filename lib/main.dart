@@ -4,7 +4,6 @@ import 'package:oblio/app.dart';
 import 'package:oblio/routes/routes.dart';
 import 'package:oblio/state/password/password_cubit.dart';
 import 'package:oblio/state/privacy/privacy_cubit.dart';
-import 'package:oblio/state/remember-me-checkbox/rememberme_cubit.dart';
 import 'package:oblio/state/terms/terms_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 
@@ -13,9 +12,6 @@ void main() {
     providers: [
       BlocProvider<PasswordCubit>(
         create: (BuildContext context) => PasswordCubit(),
-      ),
-      BlocProvider<RemembermeCubit>(
-        create: (BuildContext context) => RemembermeCubit(),
       ),
       BlocProvider<TermsCubit>(
         create: (BuildContext context) => TermsCubit(),

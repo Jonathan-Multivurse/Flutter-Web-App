@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:oblio/routes/routes.dart';
 import 'package:oblio/state/password/password_cubit.dart';
-import 'package:oblio/state/remember-me-checkbox/rememberme_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/alert_model.dart';
 import 'package:oblio/widget-models/card_model.dart';
@@ -39,12 +38,13 @@ class _AuthenticationCardState extends State<AuthenticationCard> {
         errorText: 'passwords must have at least one special character')
   ]);
   final _formKey = GlobalKey<FormState>();
+  var _emailController = TextEditingController();
+  var _passwordController = TextEditingController();
+
+  bool _isChecked = false;
 
   @override
   Widget build(BuildContext context) {
-    var _emailController = TextEditingController();
-    var _passwordController = TextEditingController();
-
     void userAuthentication() {
       FirebaseAuth.instance
           .signInWithEmailAndPassword(
@@ -130,7 +130,17 @@ class _AuthenticationCardState extends State<AuthenticationCard> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [RememberMe(), ForgotPassword()],
+                children: [
+                  RememberMe(
+                    value: _isChecked,
+                    onChanged: (bool) {
+                      setState(() {
+                        _isChecked = !_isChecked;
+                      });
+                    },
+                  ),
+                  ForgotPassword()
+                ],
               ),
             ),
             Row(
