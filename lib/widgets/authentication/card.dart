@@ -44,6 +44,20 @@ class _AuthenticationCardState extends State<AuthenticationCard> {
   bool _isChecked = false;
 
   @override
+  // ignore: must_call_super
+  void initState() {
+    getData();
+  }
+
+  getData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _emailController.text = prefs.getString('emailData')!;
+      _passwordController.text = prefs.getString('passData')!;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     void userAuthentication() {
       FirebaseAuth.instance
@@ -148,9 +162,16 @@ class _AuthenticationCardState extends State<AuthenticationCard> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 LoginButton(
-                  onPressed: () {
+                  onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       print('validated');
+                      SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+                      if (_isChecked == true) {
+                        prefs.setString('emailData', _emailController.text);
+                        prefs.setString('passData', _passwordController.text);
+                      }
+
                       userAuthentication();
                     } else {
                       print('Error, Something went wrong!');

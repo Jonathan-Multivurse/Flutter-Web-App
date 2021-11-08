@@ -10,6 +10,15 @@ class RightMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     List<String> tagItems = [
+      'tag1',
+      'tag2',
+      'tag3',
+      'tag4',
+      'tag5',
+      'tag6',
+      'tag7',
+    ];
     List<IconData> iconItems = [
       Icons.date_range,
       Icons.add_task,
@@ -42,6 +51,7 @@ class RightMenu extends StatelessWidget {
                 return Container(
                     padding: EdgeInsets.all(15),
                     child: FabButtonModel(
+                      tag: tagItems[index],
                       mini: true,
                       background: menuState == ''
                           ? oblioTheme.backgroundColor

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/right-window/right_window_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/fab_button_model.dart';
 import 'package:oblio/widget-models/text_model.dart';
 
 class RightWindow extends StatelessWidget {
