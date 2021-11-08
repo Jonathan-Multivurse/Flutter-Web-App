@@ -2,29 +2,23 @@ import 'package:flutter/material.dart';
 import './colors.dart';
 
 final ThemeData oblioTheme = ThemeData(
-  //primarySwatch: CompanyColors.primary[500]!,
   brightness: Brightness.light,
   primaryColor: CompanyColors.primary[500],
-  primaryColorBrightness: Brightness.dark,
   primaryColorLight: CompanyColors.primary[500],
   primaryColorDark: CompanyColors.font_primary[500],
-  // deprecated. accentColor: CompanyColors.font_secondary[87],
-  //deprecated. accentColorBrightness: Brightness.dark,
   canvasColor: CompanyColors.primary[500],
   scaffoldBackgroundColor: CompanyColors.secondary[500],
   bottomAppBarColor: CompanyColors.font_secondary[100],
   cardColor: CompanyColors.primary[50],
   dividerColor: CompanyColors.font_secondary[10],
-  highlightColor: CompanyColors.font_secondary[87],
-  splashColor: CompanyColors.font_secondary[87],
+  splashColor: Colors.transparent,
+  highlightColor: Colors.transparent,
+  // hoverColor: Colors.grey[100],
   selectedRowColor: CompanyColors.font_secondary[87],
   unselectedWidgetColor: CompanyColors.font_secondary[87],
   disabledColor: CompanyColors.font_secondary[87],
-  // deprecated! buttonColor: CompanyColors.font_secondary[87],
   toggleableActiveColor: CompanyColors.font_secondary[87],
   secondaryHeaderColor: CompanyColors.font_secondary[87],
-  // deprecated! textSelectionColor: CompanyColors.font_primary[54],
-  // deprecated! textSelectionHandleColor: CompanyColors.font_primary[54],
   backgroundColor: CompanyColors.primary[500],
   dialogBackgroundColor: CompanyColors.font_secondary[87],
   indicatorColor: CompanyColors.font_secondary[87],
@@ -57,6 +51,8 @@ final ThemeData oblioTheme = ThemeData(
             (states) => CompanyColors.primary[50]),
         splashFactory: NoSplash.splashFactory),
   ),
+
+  //button theme
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
         elevation: MaterialStateProperty.resolveWith((states) => 0),
@@ -72,6 +68,15 @@ final ThemeData oblioTheme = ThemeData(
             (states) => CompanyColors.red[500]),
         splashFactory: NoSplash.splashFactory),
   ),
+  // Fab Button Theme
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: Colors.white,
+      focusColor: Colors.transparent,
+      hoverColor: Colors.transparent,
+      splashColor: Colors.transparent),
+
+  // Divider Theme
+  dividerTheme: DividerThemeData(color: Colors.grey[400], thickness: 1.5),
 
   // Text Theme
   textTheme: TextTheme(
@@ -121,7 +126,7 @@ final ThemeData oblioTheme = ThemeData(
     ),
   ),
 
-  //
+  // primary text theme
   primaryTextTheme: TextTheme(
     headline1: TextStyle(
         color: CompanyColors.font_primary[87],
@@ -231,13 +236,7 @@ final ThemeData oblioTheme = ThemeData(
     opacity: 1,
     size: 24,
   ),
-  floatingActionButtonTheme: FloatingActionButtonThemeData(
-    foregroundColor: CompanyColors.primary[500],
-    backgroundColor: CompanyColors.orange[500],
-    focusColor: CompanyColors.orange[300],
-    hoverColor: CompanyColors.orange[600],
-    splashColor: CompanyColors.red[400],
-  ),
+
   sliderTheme: SliderThemeData(
     activeTrackColor: null,
     inactiveTrackColor: null,
