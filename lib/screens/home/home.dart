@@ -7,7 +7,6 @@ import 'package:oblio/widgets/home/header.dart';
 import 'package:oblio/widgets/home/left-menu.dart';
 import 'package:oblio/widgets/home/right-menu.dart';
 import 'package:oblio/widgets/home/right_window.dart';
-import 'package:oblio/widgets/home/short-card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

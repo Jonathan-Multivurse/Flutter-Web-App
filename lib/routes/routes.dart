@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:oblio/screens/authentication/authentication_screen.dart';
 import 'package:oblio/screens/home/home.dart';
 import 'package:oblio/screens/registration/registration_screen.dart';
+import 'package:oblio/screens/reset/reset.dart';
 import 'package:page_transition/page_transition.dart';
 
 const String AuthenticationRoute = '/authentication';
 const String RegistrationRoute = '/registration';
+const String ResetpasswordRoute = '/reset-password';
 const String HomeRoute = '/home';
-const String d = '/d';
 const String e = '/e';
 const String f = '/f';
 const String g = '/g';
@@ -32,6 +33,13 @@ class Routes {
           settings: settings,
           duration: const Duration(milliseconds: 50),
         );
+      case ResetpasswordRoute:
+        return PageTransition(
+          child: ResetScreen(),
+          type: PageTransitionType.fade,
+          settings: settings,
+          duration: const Duration(milliseconds: 100),
+        );
       case HomeRoute:
         return PageTransition(
           child: HomeScreen(),
@@ -39,13 +47,7 @@ class Routes {
           settings: settings,
           duration: const Duration(milliseconds: 50),
         );
-      case d:
-        return PageTransition(
-          child: Container(),
-          type: PageTransitionType.fade,
-          settings: settings,
-          duration: const Duration(milliseconds: 100),
-        );
+
       case e:
         return PageTransition(
           child: Container(),

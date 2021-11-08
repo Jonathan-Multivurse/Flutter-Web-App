@@ -153,7 +153,11 @@ class _AuthenticationCardState extends State<AuthenticationCard> {
                       });
                     },
                   ),
-                  ForgotPassword()
+                  ForgotPassword(
+                    onTap: () {
+                      Navigator.pushNamed(context, ResetpasswordRoute);
+                    },
+                  )
                 ],
               ),
             ),

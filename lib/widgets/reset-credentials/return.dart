@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/text_model.dart';
 
-class ForgotPassword extends StatelessWidget {
+class Return extends StatelessWidget {
   final Function() onTap;
-  const ForgotPassword({Key? key, required this.onTap}) : super(key: key);
+  const Return({Key? key, required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class ForgotPassword extends StatelessWidget {
       hoverColor: Colors.transparent,
       highlightColor: Colors.transparent,
       child: TextModel(
-          data: 'FORGOT PASSWORD',
+          data: 'Return to Sign In',
           style: oblioTheme.textTheme.overline!,
           textAlign: TextAlign.left,
           textDirection: TextDirection.ltr),
