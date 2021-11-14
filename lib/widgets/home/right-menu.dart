@@ -4,13 +4,14 @@ import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/state/right-window/right_window_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/fab_button_model.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class RightMenu extends StatelessWidget {
   const RightMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-     List<String> tagItems = [
+    List<String> tagItems = [
       'tag1',
       'tag2',
       'tag3',
@@ -29,13 +30,13 @@ class RightMenu extends StatelessWidget {
       Icons.phone,
     ];
     List<Color> colorItems = [
-      Colors.indigoAccent,
-      Colors.pink[400]!,
-      Colors.blue[500]!,
-      Colors.yellow[600]!,
-      Colors.green[400]!,
-      Colors.deepPurple[600]!,
-      Colors.orange[400]!
+      HexColor('#435BD9'),
+      HexColor('#FA4583'),
+      HexColor('#5F78E4'),
+      HexColor('#FDC173'),
+      HexColor('#0EBB6A'),
+      HexColor('#711BEF'),
+      HexColor('#FDAF4C'),
     ];
     return BlocBuilder<RightMenuCubit, String>(
       builder: (context, menuState) {
@@ -44,12 +45,12 @@ class RightMenu extends StatelessWidget {
           color: Colors.white,
           child: Container(
             width: 75,
-            padding: EdgeInsets.only(top: 40),
+            padding: EdgeInsets.only(top: 20),
             child: ListView.builder(
               itemCount: iconItems.length,
               itemBuilder: (context, index) {
                 return Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(10),
                     child: FabButtonModel(
                       tag: tagItems[index],
                       mini: true,

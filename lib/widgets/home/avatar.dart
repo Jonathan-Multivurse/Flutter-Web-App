@@ -17,7 +17,7 @@ class HomeAvatar extends StatelessWidget {
           backgroundColor: oblioTheme.backgroundColor,
           radius: 35,
           backgroundImage: AssetImage(
-            'lib/assets/images/avatar.jpg',
+            'lib/assets/images/1.0x/avatar.jpg',
           ),
         ),
       ),

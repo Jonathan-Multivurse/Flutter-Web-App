@@ -1,41 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 
-class InputModel extends StatelessWidget {
+class SearchInputModel extends StatelessWidget {
   final double width;
-  final bool obscure;
   final TextStyle style;
   final Color cursorColor;
   final Color fillColor;
   final String label;
-  final Widget suffixIcon;
   final Widget prefixIcon;
   final TextStyle labelStyle;
-  final TextStyle errorStyle;
-  final InputBorder border;
-  final InputBorder errorBorder;
-  final InputBorder focusedBorder;
-  final InputBorder enabledBorder;
   final EdgeInsetsGeometry padding;
   final String? Function(String?)? validator;
   final TextEditingController controller;
 
-  InputModel({
+  SearchInputModel({
     Key? key,
     required this.width,
-    required this.obscure,
     required this.style,
     required this.cursorColor,
     required this.fillColor,
     required this.label,
-    required this.suffixIcon,
     required this.prefixIcon,
     required this.labelStyle,
-    required this.errorStyle,
-    required this.border,
-    required this.errorBorder,
-    required this.focusedBorder,
-    required this.enabledBorder,
     required this.padding,
     this.validator,
     required this.controller,
@@ -48,21 +34,39 @@ class InputModel extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: TextFormField(
-            obscureText: obscure,
+            obscureText: false,
             style: style,
             cursorColor: cursorColor,
             decoration: InputDecoration(
               isDense: false,
               hoverColor: Colors.transparent,
-              suffixIcon: suffixIcon,
               prefixIcon: prefixIcon,
               suffixStyle: TextStyle(color: oblioTheme.primaryColorDark),
               fillColor: fillColor,
-              errorStyle: errorStyle,
-              border: border,
-              errorBorder: errorBorder,
-              focusedBorder: focusedBorder,
-              enabledBorder: enabledBorder,
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(
+                      color: Colors.grey[300]!,
+                      width: 1,
+                      style: BorderStyle.solid)),
+              errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(
+                      color: Colors.grey[300]!,
+                      width: 1,
+                      style: BorderStyle.solid)),
+              focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(
+                      color: Colors.grey[300]!,
+                      width: 1,
+                      style: BorderStyle.solid)),
+              enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(
+                      color: Colors.grey[300]!,
+                      width: 1,
+                      style: BorderStyle.solid)),
               contentPadding: padding,
               label: Text(label),
               labelStyle: labelStyle,

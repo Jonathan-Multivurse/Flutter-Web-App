@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
-class LeftMenuTileModel extends StatelessWidget {
+class TileModel extends StatelessWidget {
   final Widget? leading;
   final Widget? title;
   final GestureTapCallback? onTap;
   final bool selected;
 
-  const LeftMenuTileModel({
+  const TileModel({
     Key? key,
     required this.leading,
     required this.title,
@@ -26,7 +27,7 @@ class LeftMenuTileModel extends StatelessWidget {
         selected: selected,
         focusColor: Colors.transparent,
         tileColor: Colors.transparent,
-        selectedTileColor: Colors.indigoAccent,
+        selectedTileColor: HexColor('#5F78E4'),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               topRight: Radius.circular(50), bottomRight: Radius.circular(50)),

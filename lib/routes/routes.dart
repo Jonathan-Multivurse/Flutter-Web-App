@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/screens/authentication/authentication_screen.dart';
-import 'package:oblio/screens/home/home.dart';
+import 'package:oblio/screens/main/main.dart';
 import 'package:oblio/screens/registration/registration_screen.dart';
 import 'package:oblio/screens/reset/reset.dart';
 import 'package:page_transition/page_transition.dart';
@@ -42,7 +42,7 @@ class Routes {
         );
       case HomeRoute:
         return PageTransition(
-          child: HomeScreen(),
+          child: MainScreen(),
           type: PageTransitionType.fade,
           settings: settings,
           duration: const Duration(milliseconds: 50),

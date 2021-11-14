@@ -3,7 +3,7 @@ import './colors.dart';
 
 final ThemeData oblioTheme = ThemeData(
   brightness: Brightness.light,
-  primaryColor: CompanyColors.primary[500],
+  primaryColor: CompanyColors.red[500],
   primaryColorLight: CompanyColors.primary[500],
   primaryColorDark: CompanyColors.font_primary[500],
   canvasColor: CompanyColors.primary[500],
@@ -68,11 +68,32 @@ final ThemeData oblioTheme = ThemeData(
             (states) => CompanyColors.red[500]),
         splashFactory: NoSplash.splashFactory),
   ),
+  //button theme
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: ButtonStyle(
+        elevation: MaterialStateProperty.resolveWith((states) => 0),
+        textStyle: MaterialStateProperty.all(
+          TextStyle(
+            fontSize: 14,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.normal,
+            color: CompanyColors.font_primary[100],
+          ),
+        ),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+        )),
+        backgroundColor: MaterialStateProperty.resolveWith(
+            (states) => CompanyColors.red[500]),
+        splashFactory: NoSplash.splashFactory),
+  ),
   // Fab Button Theme
   floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: Colors.white,
       focusColor: Colors.transparent,
       hoverColor: Colors.transparent,
+      hoverElevation: 1,
       splashColor: Colors.transparent),
 
   // Divider Theme

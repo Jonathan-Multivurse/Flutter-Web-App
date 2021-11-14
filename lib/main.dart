@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/app.dart';
 import 'package:oblio/routes/routes.dart';
+import 'package:oblio/state/collapse/collapse_cubit.dart';
 import 'package:oblio/state/left-menu/left_menu_cubit.dart';
 import 'package:oblio/state/password/password_cubit.dart';
 import 'package:oblio/state/privacy/privacy_cubit.dart';
@@ -30,6 +31,9 @@ void main() {
       ),
       BlocProvider<LeftMenuCubit>(
         create: (BuildContext context) => LeftMenuCubit(),
+      ),
+      BlocProvider<CollapseCubit>(
+        create: (BuildContext context) => CollapseCubit(),
       ),
     ],
     child: MaterialApp(
