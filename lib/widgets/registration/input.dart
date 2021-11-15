@@ -27,7 +27,6 @@ class RegistrationInput extends StatelessWidget {
         cursorColor: oblioTheme.textSelectionTheme.cursorColor!,
         fillColor: oblioTheme.inputDecorationTheme.fillColor!,
         label: label,
-        prefixIcon: Container(),
         suffixIcon: suffixIcon,
         labelStyle: oblioTheme.inputDecorationTheme.labelStyle!,
         errorStyle: oblioTheme.inputDecorationTheme.errorStyle!,

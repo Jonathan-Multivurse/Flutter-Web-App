@@ -9,7 +9,6 @@ class InputModel extends StatelessWidget {
   final Color fillColor;
   final String label;
   final Widget suffixIcon;
-  final Widget prefixIcon;
   final TextStyle labelStyle;
   final TextStyle errorStyle;
   final InputBorder border;
@@ -29,7 +28,6 @@ class InputModel extends StatelessWidget {
     required this.fillColor,
     required this.label,
     required this.suffixIcon,
-    required this.prefixIcon,
     required this.labelStyle,
     required this.errorStyle,
     required this.border,
@@ -55,7 +53,6 @@ class InputModel extends StatelessWidget {
               isDense: false,
               hoverColor: Colors.transparent,
               suffixIcon: suffixIcon,
-              prefixIcon: prefixIcon,
               suffixStyle: TextStyle(color: oblioTheme.primaryColorDark),
               fillColor: fillColor,
               errorStyle: errorStyle,
