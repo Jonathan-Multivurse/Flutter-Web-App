@@ -117,6 +117,12 @@ final ThemeData oblioTheme = ThemeData(
       fontWeight: FontWeight.normal,
       fontStyle: FontStyle.normal,
     ),
+    headline6: TextStyle(
+      color: CompanyColors.font_primary[80],
+      fontSize: 40,
+      fontWeight: FontWeight.bold,
+      fontStyle: FontStyle.normal,
+    ),
     subtitle1: TextStyle(
       color: CompanyColors.font_primary[40],
       fontSize: 16,

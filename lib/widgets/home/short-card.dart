@@ -9,7 +9,7 @@ class ShortCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CardModel(
-      height: 300,
+      height: 325,
       width: 350,
       decoration: BoxDecoration(
         color: oblioTheme.cardColor,

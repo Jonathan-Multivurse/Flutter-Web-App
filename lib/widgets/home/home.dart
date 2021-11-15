@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/widgets/home/long-card.dart';
 import 'package:oblio/widgets/home/short-card.dart';
+import 'package:oblio/widgets/home/stats_widgets.dart';
 
 class HomeWidgets extends StatelessWidget {
   const HomeWidgets({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class HomeWidgets extends StatelessWidget {
             runSpacing: 20,
             spacing: 20,
             children: [
-              ShortCard(child: Container()),
+              ShortCard(child: Container(child: StatsWidgets())),
               ShortCard(child: Container()),
               ShortCard(child: Container()),
               LongCard(child: Container()),
