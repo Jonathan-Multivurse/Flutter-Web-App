@@ -30,25 +30,6 @@ class HomeWidgets extends StatelessWidget {
               LongCard(child: Container()),
               LongCard(child: Container()),
               LongCard(child: Container()),
-
-              // TextModel(
-              //   data: 'Welcome Home',
-              //   style: oblioTheme.textTheme.headline2!,
-              //   textAlign: TextAlign.center,
-              //   textDirection: TextDirection.ltr,
-              // ),
-              // SizedBox(height: 20),
-              // PrimaryButtonModel(
-              //   height: 50,
-              //   width: 150,
-              //   padding: EdgeInsets.all(0),
-              //   onPressed: () {
-              //     Navigator.pushNamed(context, AuthenticationRoute);
-              //   },
-              //   name: 'SIGN OUT',
-              //   textStyle: oblioTheme.primaryTextTheme.button!,
-              //   style: oblioTheme.elevatedButtonTheme.style!,
-              // ),
             ],
           ),
         );

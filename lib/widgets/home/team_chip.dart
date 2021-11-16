@@ -7,12 +7,23 @@ class StatsTeamChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ChipModel(
-        label: Text('alpha team'),
-        color: oblioTheme.chipTheme.backgroundColor,
-        style: oblioTheme.textTheme.overline!,
+    return ChipModel(
+      label: Container(
+        alignment: Alignment.center,
+        width: 85,
+        child: Text(
+          'alpha team',
+          style: TextStyle(
+            fontSize: 13,
+            letterSpacing: 0.2,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w500,
+            fontStyle: FontStyle.normal,
+          ),
+        ),
       ),
+      color: oblioTheme.chipTheme.backgroundColor,
+      style: oblioTheme.textTheme.overline!,
     );
   }
 }

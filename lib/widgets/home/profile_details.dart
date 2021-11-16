@@ -10,6 +10,7 @@ class StatsProfileDetails extends StatelessWidget {
     return Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextModel(
           data: 'Mike Hunt',

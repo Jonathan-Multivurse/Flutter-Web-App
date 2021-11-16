@@ -23,9 +23,15 @@ class StatsWidgets extends StatelessWidget {
           height: 10,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [StatsAvatar(), StatsProfileDetails(), StatsTeamChip()],
+          children: [
+            StatsAvatar(),
+            SizedBox(width: 10),
+            StatsProfileDetails(),
+            SizedBox(width: 25),
+            StatsTeamChip(),
+          ],
         ),
         Padding(
           padding: EdgeInsets.all(15),

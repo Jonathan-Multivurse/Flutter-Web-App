@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
+import 'package:oblio/widget-models/alert_model.dart';
+import 'package:oblio/widgets/home/account.dart';
 
 class HomeAvatar extends StatelessWidget {
   const HomeAvatar({Key? key}) : super(key: key);
@@ -7,7 +9,18 @@ class HomeAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkResponse(
-      onTap: () {},
+      onTap: () {
+        showDialog(
+          barrierColor: Colors.transparent,
+            context: context,
+            builder: (BuildContext context) {
+              return Container(
+                padding: EdgeInsets.only(top: 70, right: 15),
+                alignment: Alignment.topRight,
+                child: AccountCard()
+              );
+            });
+      },
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,

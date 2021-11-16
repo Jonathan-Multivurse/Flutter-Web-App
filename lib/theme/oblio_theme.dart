@@ -111,6 +111,11 @@ final ThemeData oblioTheme = ThemeData(
         fontSize: 20.0,
         fontWeight: FontWeight.w500,
         fontFamily: "Poppins"),
+    headline3: TextStyle(
+        color: CompanyColors.font_primary[87],
+        fontSize: 16.0,
+        fontWeight: FontWeight.w500,
+        fontFamily: "Poppins"),
     headline5: TextStyle(
       color: CompanyColors.font_secondary[87],
       fontSize: 16,
@@ -189,6 +194,14 @@ final ThemeData oblioTheme = ThemeData(
     button: TextStyle(
       color: CompanyColors.primary[50],
       fontSize: 14,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+    overline: TextStyle(
+      color: CompanyColors.primary[50],
+      fontSize: 12,
+      letterSpacing: 0.2,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w500,
       fontStyle: FontStyle.normal,
