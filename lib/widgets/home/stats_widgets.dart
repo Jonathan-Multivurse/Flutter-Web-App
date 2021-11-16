@@ -22,36 +22,48 @@ class StatsWidgets extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            StatsAvatar(),
-            SizedBox(width: 10),
-            StatsProfileDetails(),
-            SizedBox(width: 25),
-            StatsTeamChip(),
-          ],
-        ),
-        Padding(
-          padding: EdgeInsets.all(15),
+        InkWell(
+          onTap: () {},
+          hoverColor: Colors.grey[50],
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [RankWidgets(), TaskWidgets()],
+            children: [
+              StatsAvatar(),
+              SizedBox(width: 10),
+              StatsProfileDetails(),
+              SizedBox(width: 25),
+              StatsTeamChip(),
+            ],
           ),
         ),
-        Padding(
-          padding: EdgeInsets.only(left: 20, right: 20),
-          child: DividerModel(
-            height: 0,
-            thickness: 1,
-            color: oblioTheme.dividerTheme.color!,
+        InkWell(
+          onTap: () {},
+          hoverColor: Colors.grey[50],
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [RankWidgets(), TaskWidgets()],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: DividerModel(
+                  height: 0,
+                  thickness: 1,
+                  color: oblioTheme.dividerTheme.color!,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: StatsBottomData(),
+              )
+            ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 10),
-          child: StatsBottomData(),
         )
       ],
     );
