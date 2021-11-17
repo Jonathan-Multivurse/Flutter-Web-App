@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
+import 'package:oblio/widget-models/fab_button_model.dart';
 import 'package:oblio/widget-models/tile_model.dart';
 
 class LeftMenu extends StatefulWidget {
@@ -29,9 +30,6 @@ class _LeftMenuState extends State<LeftMenu> {
           Icons.autorenew,
           Icons.shopping_cart,
           Icons.people,
-          collapseState == false
-              ? Icons.arrow_back_ios
-              : Icons.arrow_forward_ios
         ];
         List<String> navItems = [
           "Dashboard",
@@ -46,7 +44,6 @@ class _LeftMenuState extends State<LeftMenu> {
           "Workflows",
           "Products",
           "Employees",
-          "",
         ];
 
         var device = MediaQuery.of(context).size;
@@ -56,11 +53,15 @@ class _LeftMenuState extends State<LeftMenu> {
         responsiveWidth() =>
             width > 900 && collapseState == true ? 70.0 : 235.0;
 
+        var collapse = collapseState == false
+            ? Icons.arrow_back_ios
+            : Icons.arrow_forward_ios;
+
         return Visibility(
           visible: menuVisibility(),
           child: Container(
             width: responsiveWidth(),
-            padding: EdgeInsets.only(top: 25),
+            padding: EdgeInsets.only(top: 25, bottom: 10),
             child: Column(
               children: [
                 Expanded(
@@ -90,16 +91,25 @@ class _LeftMenuState extends State<LeftMenu> {
                             setState(() {
                               _selectedIndex = index;
                             });
-                            if (_selectedIndex == 12) {
-                              collapseState == false
-                                  ? context.read<CollapseCubit>().collapse()
-                                  : context.read<CollapseCubit>().expand();
-                            }
                           },
                           selected: index == _selectedIndex);
                     },
                   ),
                 ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  padding: EdgeInsets.only(top: 10, left: 8),
+                  child: FabButtonModel(
+                      onPressed: () {
+                        collapseState == false
+                            ? context.read<CollapseCubit>().collapse()
+                            : context.read<CollapseCubit>().expand();
+                      },
+                      background: Colors.grey[50]!,
+                      child: Icon(collapse, size: 20, color: Colors.grey[700]),
+                      mini: true,
+                      tag: 'collapse'),
+                )
               ],
             ),
           ),

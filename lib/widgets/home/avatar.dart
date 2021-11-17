@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/alert_model.dart';
 import 'package:oblio/widgets/home/account.dart';
 
 class HomeAvatar extends StatelessWidget {
@@ -30,7 +29,7 @@ class HomeAvatar extends StatelessWidget {
           backgroundColor: oblioTheme.backgroundColor,
           radius: 35,
           backgroundImage: AssetImage(
-            'lib/assets/images/1.0x/avatar.jpg',
+            'lib/assets/images/1.0x/avatar0.png',
           ),
         ),
       ),

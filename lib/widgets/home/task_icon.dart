@@ -14,7 +14,7 @@ class TaskIcon extends StatelessWidget {
           padding: EdgeInsets.all(5),
           child: Icon(
             Icons.assignment_turned_in,
-            size: 35,
+            size: 32,
             color: Colors.white,
           ),
           decoration: BoxDecoration(

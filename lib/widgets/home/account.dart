@@ -40,7 +40,7 @@ class AccountCard extends StatelessWidget {
                 onPressed: () {},
                 radius: 60,
                 image: AssetImage(
-                  'lib/assets/images/1.0x/avatar.jpg',
+                  'lib/assets/images/1.0x/avatar0.png',
                 ),
               ),
               SizedBox(height: 10),

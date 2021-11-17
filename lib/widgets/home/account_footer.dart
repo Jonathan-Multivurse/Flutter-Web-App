@@ -8,7 +8,7 @@ class AccountFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.only(top: 15),
+        padding: EdgeInsets.only(top: 25),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -17,7 +17,7 @@ class AccountFooter extends StatelessWidget {
               onTap: (){},
               child: TextModel(
                 data: 'PRIVACY POLICY',
-                style: oblioTheme.textTheme.overline!,
+                style: oblioTheme.textTheme.caption!,
                 textAlign: TextAlign.left,
                 textDirection: TextDirection.ltr,
               ),
@@ -27,7 +27,7 @@ class AccountFooter extends StatelessWidget {
               onTap: (){},
               child: TextModel(
                 data: 'TERMS OF SERVICE',
-                style: oblioTheme.textTheme.overline!,
+                style: oblioTheme.textTheme.caption!,
                 textAlign: TextAlign.left,
                 textDirection: TextDirection.ltr,
               ),

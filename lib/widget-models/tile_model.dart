@@ -21,7 +21,7 @@ class TileModel extends StatelessWidget {
         leading: leading,
         title: title,
         dense: true,
-        contentPadding: EdgeInsets.all(8),
+        contentPadding: EdgeInsets.only(top: 8, right: 8, bottom: 8, left: 15),
         enabled: true,
         onTap: onTap,
         selected: selected,

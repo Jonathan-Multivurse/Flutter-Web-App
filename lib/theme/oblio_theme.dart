@@ -136,8 +136,8 @@ final ThemeData oblioTheme = ThemeData(
       fontStyle: FontStyle.normal,
     ),
     caption: TextStyle(
-      color: CompanyColors.font_primary[100],
-      fontSize: null,
+      color: CompanyColors.font_primary[40],
+      fontSize: 11,
       fontWeight: FontWeight.w400,
       fontStyle: FontStyle.normal,
     ),

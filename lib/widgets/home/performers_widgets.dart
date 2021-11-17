@@ -32,7 +32,7 @@ class PerformersWidgets extends StatelessWidget {
           child: PerformersDetails(
             number: '1. ',
             image: AssetImage(
-              'lib/assets/images/1.0x/avatar2.jpg',
+              'lib/assets/images/1.0x/avatar1.png',
             ),
             title: 'SALES . SENIOR . GAMMA',
             name: 'Scott Byler',
@@ -46,7 +46,7 @@ class PerformersWidgets extends StatelessWidget {
           child: PerformersDetails(
             number: '2. ',
             image: AssetImage(
-              'lib/assets/images/1.0x/avatar4.jpg',
+              'lib/assets/images/1.0x/avatar2.png',
             ),
             title: 'HR . SENIOR . GAMMA',
             name: 'Halima Sterling',
@@ -60,7 +60,7 @@ class PerformersWidgets extends StatelessWidget {
           child: PerformersDetails(
             number: '3. ',
             image: AssetImage(
-              'lib/assets/images/1.0x/avatar3.jpg',
+              'lib/assets/images/1.0x/avatar3.png',
             ),
             title: 'Marketing . SENIOR . GAMMA',
             name: 'Sara Jones',
