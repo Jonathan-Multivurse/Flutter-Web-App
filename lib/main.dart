@@ -8,6 +8,7 @@ import 'package:oblio/state/password/password_cubit.dart';
 import 'package:oblio/state/privacy/privacy_cubit.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/state/right-window/right_window_cubit.dart';
+import 'package:oblio/state/scheduled/scheduled_cubit.dart';
 import 'package:oblio/state/terms/terms_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 
@@ -34,6 +35,9 @@ void main() {
       ),
       BlocProvider<CollapseCubit>(
         create: (BuildContext context) => CollapseCubit(),
+      ),
+      BlocProvider<ScheduledCubit>(
+        create: (BuildContext context) => ScheduledCubit(),
       ),
     ],
     child: MaterialApp(
