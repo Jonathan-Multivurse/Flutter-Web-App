@@ -14,58 +14,50 @@ class StatsWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      splashColor: Colors.grey[100],
-      customBorder: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
-      ),
-      hoverColor: Colors.grey[50],
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          StatsTitle(),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              StatsAvatar(),
-              SizedBox(width: 10),
-              StatsProfileDetails(),
-              SizedBox(width: 25),
-              StatsTeamChip(),
-            ],
-          ),
-          Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [RankWidgets(), TaskWidgets()],
-                ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        StatsTitle(),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            StatsAvatar(),
+            SizedBox(width: 10),
+            StatsProfileDetails(),
+            SizedBox(width: 25),
+            StatsTeamChip(),
+          ],
+        ),
+        Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [RankWidgets(), TaskWidgets()],
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                child: DividerModel(
-                  height: 0,
-                  thickness: 1,
-                  color: oblioTheme.dividerTheme.color!,
-                ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: DividerModel(
+                height: 0,
+                thickness: 1,
+                color: oblioTheme.dividerTheme.color!,
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: StatsBottomData(),
-              )
-            ],
-          )
-        ],
-      ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: StatsBottomData(),
+            )
+          ],
+        )
+      ],
     );
   }
 }

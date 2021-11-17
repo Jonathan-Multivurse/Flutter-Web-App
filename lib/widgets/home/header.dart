@@ -51,7 +51,7 @@ class HomeHeader extends StatelessWidget {
         child: HomeHeaderTitle(),
       ),
       centerTitle: false,
-      elevation: 1,
+      elevation: 4,
       actions: [
         SearchInput(
           obscure: false,

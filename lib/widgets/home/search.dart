@@ -19,7 +19,7 @@ class SearchInput extends StatelessWidget {
     var device = MediaQuery.of(context).size;
     var width = device.width;
 
-    dynamicWidth() => width > 500 ? width / 3 : width / 2;
+    dynamicWidth() => width > 500 ? width / 2 : width / 2;
     return Padding(
       padding: EdgeInsets.all(10),
       child: SearchInputModel(

@@ -41,7 +41,7 @@ class RightMenu extends StatelessWidget {
     return BlocBuilder<RightMenuCubit, String>(
       builder: (context, menuState) {
         return Material(
-          elevation: 2,
+          elevation: 4,
           color: Colors.white,
           child: Container(
             width: 75,
