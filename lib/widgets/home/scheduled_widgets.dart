@@ -4,6 +4,7 @@ import 'package:oblio/widget-models/divider_model.dart';
 import 'package:oblio/widgets/home/profile_details.dart';
 import 'package:oblio/widgets/home/rank.dart';
 import 'package:oblio/widgets/home/scheduled_arc.dart';
+import 'package:oblio/widgets/home/scheduled_circular.dart';
 import 'package:oblio/widgets/home/scheduled_numbers.dart';
 import 'package:oblio/widgets/home/scheduled_sub.dart';
 import 'package:oblio/widgets/home/scheduled_title.dart';
@@ -18,17 +19,24 @@ class ScheduledWidets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ScheduledTitle(),
-        SizedBox(height: 10),
-        ScheduledSub(),
-        ScheduledNumbers(),
-        InkWell(onTap: () {}, hoverColor: Colors.grey[50], child: Container()),
-        InkWell(onTap: () {}, hoverColor: Colors.grey[50], child: Container())
-      ],
+    return InkWell(
+      onTap: () {},
+      splashColor: Colors.grey[100],
+      customBorder: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      hoverColor: Colors.grey[50],
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ScheduledTitle(),
+          SizedBox(height: 10),
+          ScheduledSub(),
+          ScheduledNumbers(),
+          ScheduledCircular()
+        ],
+      ),
     );
   }
 }
