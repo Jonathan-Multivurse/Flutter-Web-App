@@ -27,8 +27,14 @@ class HomeWidgets extends StatelessWidget {
             spacing: 20,
             children: [
               ShortCard(child: Container(child: StatsWidgets())),
-              ShortCard(child: Container(child: PerformersWidgets(),)),
-              ShortCard(child: Container(child: ScheduledWidets(),)),
+              ShortCard(
+                  child: Container(
+                child: PerformersWidgets(),
+              )),
+              ShortCard(
+                  child: Container(
+                child: ScheduledWidets(),
+              )),
               LongCard(child: Container()),
               LongCard(child: Container()),
               LongCard(child: Container()),

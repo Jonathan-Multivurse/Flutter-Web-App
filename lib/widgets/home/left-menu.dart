@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
 import 'package:oblio/widget-models/fab_button_model.dart';
 import 'package:oblio/widget-models/tile_model.dart';
@@ -51,7 +52,7 @@ class _LeftMenuState extends State<LeftMenu> {
         menuVisibility() => width < 900 ? false : true;
         collapsedTile() => collapseState == false ? true : false;
         responsiveWidth() =>
-            width > 900 && collapseState == true ? 70.0 : 235.0;
+            width > 900 && collapseState == true ? 70.0 : 200.0;
 
         var collapse = collapseState == false
             ? Icons.arrow_back_ios
@@ -100,6 +101,7 @@ class _LeftMenuState extends State<LeftMenu> {
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.only(top: 10, left: 8),
                   child: FabButtonModel(
+                    hover: HexColor('#fff'),
                       onPressed: () {
                         collapseState == false
                             ? context.read<CollapseCubit>().collapse()

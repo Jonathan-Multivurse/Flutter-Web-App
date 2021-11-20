@@ -29,6 +29,15 @@ class RightMenu extends StatelessWidget {
       Icons.email,
       Icons.phone,
     ];
+    List<HexColor> hoverItems = [
+      HexColor('#435BD9'),
+      HexColor('#FA4583'),
+      HexColor('#5F78E4'),
+      HexColor('#FDC173'),
+      HexColor('#0EBB6A'),
+      HexColor('#711BEF'),
+      HexColor('#FDAF4C'),
+    ];
     List<Color> colorItems = [
       HexColor('#435BD9'),
       HexColor('#FA4583'),
@@ -53,6 +62,7 @@ class RightMenu extends StatelessWidget {
                     padding: EdgeInsets.all(10),
                     child: FabButtonModel(
                       tag: tagItems[index],
+                      hover: HexColor('fff'),
                       mini: true,
                       background: menuState == ''
                           ? oblioTheme.backgroundColor
