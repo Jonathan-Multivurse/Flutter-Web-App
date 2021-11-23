@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/widgets/home/scheduled_circular.dart';
-import 'package:oblio/widgets/home/scheduled_numbers.dart';
 import 'package:oblio/widgets/home/scheduled_sub.dart';
 import 'package:oblio/widgets/home/scheduled_title.dart';
 

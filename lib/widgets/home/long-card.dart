@@ -9,7 +9,7 @@ class LongCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CardModel(
-      height: 500,
+      height: 550,
       width: 350,
       decoration: BoxDecoration(
         color: oblioTheme.cardColor,
