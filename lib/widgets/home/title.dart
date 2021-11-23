@@ -9,7 +9,7 @@ class HomeHeaderTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     var device = MediaQuery.of(context).size;
     var width = device.width;
-    titleVisibility() => width > 500 ? true : false;
+    titleVisibility() => width > 1400 ? true : false;
     return Visibility(
       visible: titleVisibility(),
       child: Row(

@@ -15,9 +15,9 @@ class HomeHeader extends StatelessWidget {
     var device = MediaQuery.of(context).size;
     var width = device.width;
     menuVisibility() => width < 900 ? true : false;
-    logoVisibility() => width > 700 ? true : false;
-    titleVisibility() => width > 1050 ? true : false;
-    buttonVisibility() => width > 500 ? true : false;
+    logoVisibility() => width > 900 ? true : false;
+    titleVisibility() => width > 1350 ? true : false;
+    buttonVisibility() => width > 750 ? true : false;
     leading() => width < 500 ? 250.0 : 200.0;
     return AppBar(
       backgroundColor: Colors.white,

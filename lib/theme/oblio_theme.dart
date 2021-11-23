@@ -93,7 +93,6 @@ final ThemeData oblioTheme = ThemeData(
       backgroundColor: Colors.white,
       focusColor: Colors.transparent,
       hoverColor: Colors.transparent,
-      hoverElevation: 1,
       splashColor: Colors.transparent),
 
   // Divider Theme

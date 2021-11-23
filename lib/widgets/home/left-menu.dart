@@ -101,6 +101,8 @@ class _LeftMenuState extends State<LeftMenu> {
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.only(top: 10, left: 8),
                   child: FabButtonModel(
+                    elevation: 2,
+                    hoverElevation: 1,
                     hover: HexColor('#fff'),
                       onPressed: () {
                         collapseState == false
