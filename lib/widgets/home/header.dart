@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/widgets/home/avatar.dart';
+import 'package:oblio/widgets/home/collapsed_left_menu.dart';
 import 'package:oblio/widgets/home/logo.dart';
 import 'package:oblio/widgets/home/publish_button.dart';
 import 'package:oblio/widgets/home/search.dart';
@@ -33,10 +34,26 @@ class HomeHeader extends StatelessWidget {
               hoverColor: Colors.transparent,
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
-              child: Icon(
-                Icons.menu,
-                color: Colors.grey[700],
-                size: 30,
+              child: InkResponse(
+                onTap: () {
+                  showDialog(
+                      barrierColor: Colors.transparent,
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Container(
+                            padding: EdgeInsets.only(top: 60, right: 15),
+                            alignment: Alignment.topLeft,
+                            child: CollapsedLeftMenu());
+                      });
+                },
+                hoverColor: Colors.transparent,
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                child: Icon(
+                  Icons.menu,
+                  color: Colors.grey[700],
+                  size: 30,
+                ),
               ),
             ),
           ),
