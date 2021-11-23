@@ -21,7 +21,7 @@ class PerformersDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.only(left: 15, right: 15),
+        padding: EdgeInsets.only(left: 15, right: 15, bottom: 2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,

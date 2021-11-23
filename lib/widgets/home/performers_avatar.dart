@@ -28,7 +28,7 @@ class PerformersAvatar extends StatelessWidget {
             padding: EdgeInsets.all(5),
             child: CircleAvatar(
                 backgroundColor: oblioTheme.backgroundColor,
-                radius: 25,
+                radius: 27,
                 backgroundImage: image),
           ),
         ),

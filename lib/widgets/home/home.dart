@@ -21,7 +21,7 @@ class HomeWidgets extends StatelessWidget {
         return Visibility(
           visible: visibility(),
           child: Wrap(
-            alignment: WrapAlignment.start,
+            alignment: WrapAlignment.center,
             direction: Axis.horizontal,
             textDirection: TextDirection.ltr,
             runSpacing: 20,
@@ -37,8 +37,8 @@ class HomeWidgets extends StatelessWidget {
                 child: ScheduledWidets(),
               )),
               LongCard(child: PipelineWidets()),
-              LongCard(child: Container()),
-              LongCard(child: Container()),
+              LongCard(child: PipelineWidets()),
+              LongCard(child: PipelineWidets()),
             ],
           ),
         );

@@ -22,7 +22,7 @@ class TaskWidgets extends StatelessWidget {
             textDirection: TextDirection.ltr,
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -34,6 +34,9 @@ class TaskWidgets extends StatelessWidget {
               ),
               TaskNumber(),
             ],
+          ),
+          SizedBox(
+            height: 5,
           ),
           TaskBottomText()
         ],

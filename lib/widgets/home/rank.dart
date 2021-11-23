@@ -22,7 +22,7 @@ class RankWidgets extends StatelessWidget {
             textDirection: TextDirection.ltr,
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -34,6 +34,9 @@ class RankWidgets extends StatelessWidget {
               ),
               RankNumber(),
             ],
+          ),
+          SizedBox(
+            height: 5,
           ),
           RankBottomText()
         ],

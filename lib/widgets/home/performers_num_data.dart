@@ -10,8 +10,8 @@ class PerformersNumData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: CircularFrameModel(
-          height: 30,
-          width: 30,
+          height: 35,
+          width: 35,
           padding: EdgeInsets.all(2),
           child: Center(
             child: Text(

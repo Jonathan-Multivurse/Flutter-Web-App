@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/card_model.dart';
 
 class ShortCard extends StatelessWidget {
   final Widget child;
@@ -8,24 +7,37 @@ class ShortCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardModel(
-      height: 325,
-      width: 350,
-      decoration: BoxDecoration(
-        color: oblioTheme.cardColor,
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.blueGrey.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: Offset(0, 1),
+    var device = MediaQuery.of(context).size;
+    var width = device.width;
+    responsiveWidth() {
+      if (width > 1400) {
+        return 350.0;
+      } else if (width <= 1400 && width >= 700) {
+        return 400.0;
+      } else if (width < 700) {
+        return 350.0;
+      }
+    }
+
+    return IntrinsicHeight(
+      child: Container(
+        width: responsiveWidth(),
+        decoration: BoxDecoration(
+          color: oblioTheme.cardColor,
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
           ),
-        ],
+          boxShadow: [
+            BoxShadow(
+              color: Colors.blueGrey.withOpacity(0.1),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: Offset(0, 1),
+            ),
+          ],
+        ),
+        child: child,
       ),
-      child: child,
     );
   }
 }

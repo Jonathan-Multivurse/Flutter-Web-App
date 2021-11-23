@@ -9,8 +9,8 @@ class StatsProfileDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextModel(
           data: 'Mike Hunt',
@@ -18,9 +18,6 @@ class StatsProfileDetails extends StatelessWidget {
           textAlign: TextAlign.left,
           textDirection: TextDirection.ltr,
         ),
-        // SizedBox(
-        //   height: 20,
-        // ),
         TextModel(
           data: 'Marketing Junior',
           style: oblioTheme.textTheme.overline!,

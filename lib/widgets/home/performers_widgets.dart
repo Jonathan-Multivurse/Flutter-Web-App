@@ -9,45 +9,48 @@ class PerformersWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        PerformanceTitle(),
-        PerformersSub(),
-        SizedBox(
-          height: 10,
-        ),
-        PerformersDetails(
-          number: '1. ',
-          image: AssetImage(
-            'lib/assets/images/1.0x/avatar1.png',
+    return Container(
+      height: 350,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          PerformanceTitle(),
+          PerformersSub(),
+          SizedBox(
+            height: 20,
           ),
-          title: 'SALES . SENIOR . GAMMA',
-          name: 'Scott Byler',
-          numdata: '322',
-        ),
-        PerformersDivider(),
-        PerformersDetails(
-          number: '2. ',
-          image: AssetImage(
-            'lib/assets/images/1.0x/avatar2.png',
+          PerformersDetails(
+            number: '1. ',
+            image: AssetImage(
+              'lib/assets/images/1.0x/avatar1.png',
+            ),
+            title: 'SALES . SENIOR . GAMMA',
+            name: 'Scott Byler',
+            numdata: '322',
           ),
-          title: 'HR . SENIOR . GAMMA',
-          name: 'Halima Sterling',
-          numdata: '309',
-        ),
-        PerformersDivider(),
-        PerformersDetails(
-          number: '3. ',
-          image: AssetImage(
-            'lib/assets/images/1.0x/avatar3.png',
+          PerformersDivider(),
+          PerformersDetails(
+            number: '2. ',
+            image: AssetImage(
+              'lib/assets/images/1.0x/avatar2.png',
+            ),
+            title: 'HR . SENIOR . GAMMA',
+            name: 'Halima Sterling',
+            numdata: '309',
           ),
-          title: 'Marketing . SENIOR . GAMMA',
-          name: 'Sara Jones',
-          numdata: '286',
-        ),
-      ],
+          PerformersDivider(),
+          PerformersDetails(
+            number: '3. ',
+            image: AssetImage(
+              'lib/assets/images/1.0x/avatar3.png',
+            ),
+            title: 'Marketing . SENIOR . GAMMA',
+            name: 'Sara Jones',
+            numdata: '286',
+          ),
+        ],
+      ),
     );
   }
 }

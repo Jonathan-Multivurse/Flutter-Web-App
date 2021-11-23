@@ -103,86 +103,95 @@ class _ScheduledCircularState extends State<ScheduledCircular> {
         }
 
         return Container(
-            height: 225,
+            height: 240,
             child: Stack(alignment: Alignment.bottomCenter, children: [
               ScheduledNumbers(),
               Positioned(
-                top: 50,
+                top: 45,
                 child: ScheduledArc(
                   completeColor: dynamicColors()!,
                   completePercent: arcValue()!,
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      if (menu > 0) {
-                        setState(() {
-                          menu--;
-                        });
-                      }
-                      dynamicState();
-                    },
-                    hoverColor: Colors.transparent,
-                    child: Container(
-                      width: 80,
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: HexColor('#5F78E4').withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextModel(
-                        data: 'PREV',
-                        style: TextStyle(color: Colors.grey[500]),
-                        textAlign: TextAlign.center,
-                        textDirection: TextDirection.ltr,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 25),
-                    child: CircularFrameModel(
-                        height: 100,
-                        width: 100,
-                        padding: EdgeInsets.all(2),
-                        child: Center(
-                          child: Icon(
-                            dynamicIcons(),
-                            size: 50,
-                            color: Colors.white,
+              Padding(
+                padding: EdgeInsets.only(left: 15, right: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: InkWell(
+                        onTap: () {
+                          if (menu > 0) {
+                            setState(() {
+                              menu--;
+                            });
+                          }
+                          dynamicState();
+                        },
+                        hoverColor: Colors.transparent,
+                        child: Container(
+                          width: 80,
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: HexColor('#5F78E4').withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: TextModel(
+                            data: 'PREV',
+                            style: TextStyle(color: Colors.grey[500]),
+                            textAlign: TextAlign.center,
+                            textDirection: TextDirection.ltr,
                           ),
                         ),
-                        decoration: BoxDecoration(
-                            color: dynamicColors(),
-                            borderRadius: BorderRadius.circular(100))),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      if (menu < 6) {
-                        setState(() {
-                          menu++;
-                        });
-                      }
-                      dynamicState();
-                    },
-                    hoverColor: Colors.transparent,
-                    child: Container(
-                      width: 80,
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: HexColor('#5F78E4').withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextModel(
-                        data: 'NEXT',
-                        style: TextStyle(color: Colors.grey[500]),
-                        textAlign: TextAlign.center,
-                        textDirection: TextDirection.ltr,
                       ),
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 45),
+                      child: CircularFrameModel(
+                          height: 100,
+                          width: 100,
+                          padding: EdgeInsets.all(2),
+                          child: Center(
+                            child: Icon(
+                              dynamicIcons(),
+                              size: 50,
+                              color: Colors.white,
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                              color: dynamicColors(),
+                              borderRadius: BorderRadius.circular(100))),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: InkWell(
+                        onTap: () {
+                          if (menu < 6) {
+                            setState(() {
+                              menu++;
+                            });
+                          }
+                          dynamicState();
+                        },
+                        hoverColor: Colors.transparent,
+                        child: Container(
+                          width: 80,
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: HexColor('#5F78E4').withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: TextModel(
+                            data: 'NEXT',
+                            style: TextStyle(color: Colors.grey[500]),
+                            textAlign: TextAlign.center,
+                            textDirection: TextDirection.ltr,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ]));
       },

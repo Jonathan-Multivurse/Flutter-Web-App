@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/card_model.dart';
 
 class LongCard extends StatelessWidget {
   final Widget child;
@@ -8,24 +7,25 @@ class LongCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardModel(
-      height: 550,
-      width: 350,
-      decoration: BoxDecoration(
-        color: oblioTheme.cardColor,
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.blueGrey.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: Offset(0, 1),
+    return IntrinsicHeight(
+      child: Container(
+        width: 350,
+        decoration: BoxDecoration(
+          color: oblioTheme.cardColor,
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
           ),
-        ],
+          boxShadow: [
+            BoxShadow(
+              color: Colors.blueGrey.withOpacity(0.1),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: Offset(0, 1),
+            ),
+          ],
+        ),
+        child: child,
       ),
-      child: child,
     );
   }
 }

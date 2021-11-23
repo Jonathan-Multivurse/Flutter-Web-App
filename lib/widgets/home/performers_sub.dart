@@ -9,7 +9,7 @@ class PerformersSub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+        padding: EdgeInsets.only(top: 25, left: 15, right: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,

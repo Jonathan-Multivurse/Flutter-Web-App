@@ -8,15 +8,19 @@ class ScheduledWidets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ScheduledTitle(),
-        SizedBox(height: 10),
-        ScheduledSub(),
-        ScheduledCircular()
-      ],
+    return Container(
+      height: 350,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ScheduledTitle(),
+          SizedBox(height: 20),
+          ScheduledSub(),
+           SizedBox(height: 10),
+          ScheduledCircular(),
+        ],
+      ),
     );
   }
 }
