@@ -7,9 +7,20 @@ class LongCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var device = MediaQuery.of(context).size;
+    var width = device.width;
+    responsiveWidth() {
+      if (width > 1400) {
+        return 350.0;
+      } else if (width <= 1400 && width >= 700) {
+        return 400.0;
+      } else if (width < 700) {
+        return 350.0;
+      }
+    }
     return IntrinsicHeight(
       child: Container(
-        width: 350,
+        width: responsiveWidth(),
         decoration: BoxDecoration(
           color: oblioTheme.cardColor,
           borderRadius: BorderRadius.all(
