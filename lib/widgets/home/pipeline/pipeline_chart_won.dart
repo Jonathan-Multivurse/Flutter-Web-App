@@ -9,7 +9,7 @@ class PipelineChartWon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List data = [50, 60, 75, 90];
+    List data = [80, 40, 25, 60];
     return Stack(
       alignment: AlignmentDirectional.topStart,
       children: [

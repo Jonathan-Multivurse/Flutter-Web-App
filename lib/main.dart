@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/app.dart';
 import 'package:oblio/routes/routes.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
-import 'package:oblio/state/hover/hover_cubit.dart';
 import 'package:oblio/state/left-menu/left_menu_cubit.dart';
 import 'package:oblio/state/password/password_cubit.dart';
+import 'package:oblio/state/pipeline-drawer/pipeline_drawer.dart';
 import 'package:oblio/state/privacy/privacy_cubit.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/state/right-window/right_window_cubit.dart';
@@ -40,8 +40,8 @@ void main() {
       BlocProvider<ScheduledCubit>(
         create: (BuildContext context) => ScheduledCubit(),
       ),
-      BlocProvider<RightMenuHoverCubit>(
-        create: (BuildContext context) => RightMenuHoverCubit(),
+      BlocProvider<PipelineDrawerCubit>(
+        create: (BuildContext context) => PipelineDrawerCubit(),
       ),
     ],
     child: MaterialApp(

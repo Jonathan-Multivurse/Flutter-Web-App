@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/text_model.dart';
 import 'package:oblio/widgets/home/pipeline/pipeline_chart_open.dart';
 import 'package:oblio/widgets/home/pipeline/pipeline_chart_won.dart';
 
@@ -25,7 +23,6 @@ class _PipelineChartNavigatorState extends State<PipelineChartNavigator>
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 450,
       child: DefaultTabController(
         initialIndex: 1,
         length: 2,
@@ -62,21 +59,6 @@ class _PipelineChartNavigatorState extends State<PipelineChartNavigator>
                 ),
               ),
             ),
-            InkWell(
-              onTap: () {},
-              child: Center(
-                child: Container(
-                  height: 50,
-                  padding: EdgeInsets.all(10),
-                    alignment: Alignment.centerLeft,
-                    child: TextModel(
-                      data: 'EXPAND',
-                      style: oblioTheme.textTheme.subtitle2!,
-                      textAlign: TextAlign.left,
-                      textDirection: TextDirection.ltr,
-                    )),
-              ),
-            )
           ],
         ),
       ),
