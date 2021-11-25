@@ -4,6 +4,7 @@ import 'package:oblio/app.dart';
 import 'package:oblio/routes/routes.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
 import 'package:oblio/state/left-menu/left_menu_cubit.dart';
+import 'package:oblio/state/owned-opp/owned_opp.dart';
 import 'package:oblio/state/password/password_cubit.dart';
 import 'package:oblio/state/pipeline-drawer/pipeline_drawer.dart';
 import 'package:oblio/state/privacy/privacy_cubit.dart';
@@ -42,6 +43,9 @@ void main() {
       ),
       BlocProvider<PipelineDrawerCubit>(
         create: (BuildContext context) => PipelineDrawerCubit(),
+      ),
+      BlocProvider<OwnedOppCubit>(
+        create: (BuildContext context) => OwnedOppCubit(),
       ),
     ],
     child: MaterialApp(

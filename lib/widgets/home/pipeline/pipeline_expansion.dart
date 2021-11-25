@@ -31,31 +31,35 @@ class PipelineExpansion extends StatelessWidget {
         return Visibility(
           visible: visibility(),
           child: PercentageExpansionTileModel(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                CircularPercentIndicator(
-                    radius: 60.0,
-                    lineWidth: 6.0,
-                    animation: true,
-                    percent: percentNum,
-                    center: Text(
-                      percentText + "%",
-                      // style: oblioTheme.textTheme.subtitle2,
-                    ),
-                    backgroundColor: Colors.grey[200]!,
-                    circularStrokeCap: CircularStrokeCap.round,
-                    progressColor: color),
-                SizedBox(width: 20),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(title, style: oblioTheme.textTheme.subtitle2),
-                    Text(subtitle, style: oblioTheme.textTheme.overline),
-                  ],
-                ),
-              ],
+            title: Container(
+              margin: EdgeInsets.only(top:5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  CircularPercentIndicator(
+                      radius: 55.0,
+                      lineWidth: 6.0,
+                      animation: true,
+                      percent: percentNum,
+                      center: Text(
+                        percentText + "%",
+                        // style: oblioTheme.textTheme.subtitle2,
+                      ),
+                      backgroundColor: Colors.grey[200]!,
+                      circularStrokeCap: CircularStrokeCap.round,
+                      progressColor: color),
+                  SizedBox(width: 20),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(title, style: oblioTheme.textTheme.headline4),
+                      Text(subtitle, style: oblioTheme.textTheme.overline),
+                    ],
+                  ),
+                ],
+              ),
             ),
             children: children,
           ),

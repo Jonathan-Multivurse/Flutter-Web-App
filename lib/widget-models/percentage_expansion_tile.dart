@@ -10,8 +10,11 @@ class PercentageExpansionTileModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 80,
-      child: ExpansionTile(title: title, children: children),
+      height: 75,
+      child: ExpansionTile(
+        title: title,
+        children: children,
+      ),
     );
   }
 }

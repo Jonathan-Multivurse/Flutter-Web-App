@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/widgets/home/long-card.dart';
+import 'package:oblio/widgets/home/owned/owned_opp_widgets.dart';
 import 'package:oblio/widgets/home/performers_widgets.dart';
 import 'package:oblio/widgets/home/pipeline/pipeline_widgets.dart';
 import 'package:oblio/widgets/home/scheduled_widgets.dart';
@@ -37,8 +38,8 @@ class HomeWidgets extends StatelessWidget {
                 child: ScheduledWidets(),
               )),
               LongCard(child: PipelineWidets()),
-              LongCard(child: PipelineWidets()),
-              LongCard(child: PipelineWidets()),
+              LongCard(child: Container()),
+              LongCard(child: OwnedOppWidets()),
             ],
           ),
         );

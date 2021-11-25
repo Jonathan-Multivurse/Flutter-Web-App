@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/pipeline-drawer/pipeline_drawer.dart';
-import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widgets/home/pipeline/pipeline_expansion.dart';
 
 class PipelineDrawer extends StatelessWidget {
