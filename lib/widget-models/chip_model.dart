@@ -14,6 +14,7 @@ class ChipModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       child: Chip(
         label: label,
         labelStyle: style,

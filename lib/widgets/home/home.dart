@@ -8,6 +8,7 @@ import 'package:oblio/widgets/home/pipeline/pipeline_widgets.dart';
 import 'package:oblio/widgets/home/scheduled_widgets.dart';
 import 'package:oblio/widgets/home/short-card.dart';
 import 'package:oblio/widgets/home/stats_widgets.dart';
+import 'package:oblio/widgets/home/wins/wins_widgets.dart';
 
 class HomeWidgets extends StatelessWidget {
   const HomeWidgets({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class HomeWidgets extends StatelessWidget {
                 child: ScheduledWidets(),
               )),
               LongCard(child: PipelineWidets()),
-              LongCard(child: Container()),
+              LongCard(child: WinsWidets()),
               LongCard(child: OwnedOppWidets()),
             ],
           ),
