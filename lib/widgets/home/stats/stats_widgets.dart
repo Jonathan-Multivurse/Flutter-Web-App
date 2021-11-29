@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/divider_model.dart';
-import 'package:oblio/widgets/home/stats_profile_details.dart';
-import 'package:oblio/widgets/home/rank.dart';
-import 'package:oblio/widgets/home/stats_avatar.dart';
-import 'package:oblio/widgets/home/stats_bottom_data.dart';
-import 'package:oblio/widgets/home/stats_title.dart';
-import 'package:oblio/widgets/home/tasks.dart';
-import 'package:oblio/widgets/home/team_chip.dart';
+import 'package:oblio/widgets/home/common/common_title.dart';
+import 'package:oblio/widgets/home/stats/stats_profile_details.dart';
+import 'package:oblio/widgets/home/stats/stats_ranks.dart';
+import 'package:oblio/widgets/home/stats/stats_avatar.dart';
+import 'package:oblio/widgets/home/stats/stats_bottom_data.dart';
+import 'package:oblio/widgets/home/stats/stats_tasks.dart';
+import 'package:oblio/widgets/home/stats/stats_team_chip.dart';
 
 class StatsWidgets extends StatelessWidget {
   const StatsWidgets({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class StatsWidgets extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          StatsTitle(),
+          CommonTitle(title: 'YOUR STATS'),
           SizedBox(
             height: 10,
           ),

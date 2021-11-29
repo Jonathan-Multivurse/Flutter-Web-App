@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widgets/home/account.dart';
+import 'package:oblio/widgets/home/account/account.dart';
 
-class HomeAvatar extends StatelessWidget {
-  const HomeAvatar({Key? key}) : super(key: key);
+class HeaderAvatar extends StatelessWidget {
+  const HeaderAvatar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

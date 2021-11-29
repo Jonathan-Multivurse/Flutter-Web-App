@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
-import 'package:oblio/widgets/home/long-card.dart';
+import 'package:oblio/widgets/home/common/long-card.dart';
 import 'package:oblio/widgets/home/owned/owned_opp_widgets.dart';
-import 'package:oblio/widgets/home/performers_widgets.dart';
+import 'package:oblio/widgets/home/performers/performers_widgets.dart';
 import 'package:oblio/widgets/home/pipeline/pipeline_widgets.dart';
-import 'package:oblio/widgets/home/scheduled_widgets.dart';
-import 'package:oblio/widgets/home/short-card.dart';
-import 'package:oblio/widgets/home/stats_widgets.dart';
+import 'package:oblio/widgets/home/scheduled/scheduled_widgets.dart';
+import 'package:oblio/widgets/home/common/short-card.dart';
+import 'package:oblio/widgets/home/stats/stats_widgets.dart';
 import 'package:oblio/widgets/home/wins/wins_widgets.dart';
 
 class HomeWidgets extends StatelessWidget {

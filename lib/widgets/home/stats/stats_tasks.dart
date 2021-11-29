@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/text_model.dart';
-import 'package:oblio/widgets/home/rank_bottom_text.dart';
-import 'package:oblio/widgets/home/rank_icon.dart';
-import 'package:oblio/widgets/home/rank_number.dart';
+import 'package:oblio/widgets/home/stats/stats_task_bottom_text.dart';
+import 'package:oblio/widgets/home/stats/stats_task_icon.dart';
+import 'package:oblio/widgets/home/stats/stats_task_number.dart';
 
-class RankWidgets extends StatelessWidget {
-  const RankWidgets({Key? key}) : super(key: key);
+class TaskWidgets extends StatelessWidget {
+  const TaskWidgets({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class RankWidgets extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextModel(
-            data: 'RANK',
+            data: 'TASKS',
             style: oblioTheme.textTheme.headline4!,
             textAlign: TextAlign.left,
             textDirection: TextDirection.ltr,
@@ -28,17 +28,17 @@ class RankWidgets extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              RankIcon(),
+              TaskIcon(),
               SizedBox(
                 width: 20,
               ),
-              RankNumber(),
+              TaskNumber(),
             ],
           ),
           SizedBox(
             height: 5,
           ),
-          RankBottomText()
+          TaskBottomText()
         ],
       ),
     );

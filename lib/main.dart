@@ -12,6 +12,7 @@ import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/state/right-window/right_window_cubit.dart';
 import 'package:oblio/state/scheduled/scheduled_cubit.dart';
 import 'package:oblio/state/terms/terms_cubit.dart';
+import 'package:oblio/state/wins-opp/wins_opp.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 
 void main() {
@@ -46,6 +47,9 @@ void main() {
       ),
       BlocProvider<OwnedOppCubit>(
         create: (BuildContext context) => OwnedOppCubit(),
+      ),
+      BlocProvider<WinsOppCubit>(
+        create: (BuildContext context) => WinsOppCubit(),
       ),
     ],
     child: MaterialApp(

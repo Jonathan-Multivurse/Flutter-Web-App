@@ -24,13 +24,13 @@ class PipelineChartOpen extends StatelessWidget {
                 gap: '5',
                 pointColorMapper: (data, index) {
                   if (index == 0) {
-                    return HexColor('#0EBB6A');
+                    return HexColor('#34CA87');
                   } else if (index == 1) {
-                    return HexColor('#FA4583');
+                    return HexColor('#FF8787');
                   } else if (index == 2) {
-                    return HexColor('#FDAF4C');
+                    return HexColor('#FDB653');
                   } else if (index == 3) {
-                    return HexColor('#435BD9');
+                    return HexColor('#8FA1EC');
                   }
                 },
                 cornerStyle: CornerStyle.bothCurve,

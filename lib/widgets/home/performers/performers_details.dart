@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/widget-models/text_model.dart';
-import 'package:oblio/widgets/home/performers_avatar.dart';
-import 'package:oblio/widgets/home/performers_num_data.dart';
+import 'package:oblio/widgets/home/performers/performers_avatar.dart';
+import 'package:oblio/widgets/home/performers/performers_num_data.dart';
 
 class PerformersDetails extends StatelessWidget {
   final String number;

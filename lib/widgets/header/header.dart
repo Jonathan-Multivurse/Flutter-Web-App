@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widgets/home/avatar.dart';
-import 'package:oblio/widgets/home/collapsed_left_menu.dart';
-import 'package:oblio/widgets/home/logo.dart';
-import 'package:oblio/widgets/home/publish_button.dart';
-import 'package:oblio/widgets/home/search.dart';
-import 'package:oblio/widgets/home/title.dart';
+import 'package:oblio/widgets/header/header_avatar.dart';
+import 'package:oblio/widgets/left-menu/collapsed_left_menu.dart';
+import 'package:oblio/widgets/header/header_logo.dart';
+import 'package:oblio/widgets/header/header_publish_button.dart';
+import 'package:oblio/widgets/header/search.dart';
+import 'package:oblio/widgets/header/header_title.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -82,7 +82,7 @@ class HomeHeader extends StatelessWidget {
           visible: buttonVisibility(),
           child: PublishButton(onPressed: () {}),
         ),
-        HomeAvatar(),
+        HeaderAvatar(),
       ],
     );
   }

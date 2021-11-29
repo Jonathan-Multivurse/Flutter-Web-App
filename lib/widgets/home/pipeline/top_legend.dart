@@ -23,7 +23,7 @@ class PipelineTopLegend extends StatelessWidget {
                     child: Container(),
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                      color: HexColor('#435BD9'),
+                      color: HexColor('#8FA1EC'),
                       borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
@@ -50,7 +50,7 @@ class PipelineTopLegend extends StatelessWidget {
                     child: Container(),
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                      color: HexColor('#FDAF4C'),
+                      color: HexColor('#FDB653'),
                       borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(

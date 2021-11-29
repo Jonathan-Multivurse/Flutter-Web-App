@@ -10,6 +10,7 @@ class StatsTeamChip extends StatelessWidget {
     return ChipModel(
       label: Container(
         alignment: Alignment.center,
+        height: 30,
         width: 85,
         child: Text(
           'alpha team',

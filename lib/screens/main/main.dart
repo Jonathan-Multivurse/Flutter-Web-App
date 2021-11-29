@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/screens/home/home.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widgets/home/header.dart';
-import 'package:oblio/widgets/home/left-menu.dart';
-import 'package:oblio/widgets/home/right-menu.dart';
-import 'package:oblio/widgets/home/right_window.dart';
+import 'package:oblio/widgets/header/header.dart';
+import 'package:oblio/widgets/left-menu/left_menu.dart';
+import 'package:oblio/widgets/right-menu/right_menu.dart';
+import 'package:oblio/widgets/right-menu/right_window.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);

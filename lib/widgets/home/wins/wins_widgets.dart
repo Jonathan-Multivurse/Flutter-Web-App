@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:oblio/widgets/home/common/common_subtitle.dart';
+import 'package:oblio/widgets/home/common/common_title.dart';
+import 'package:oblio/widgets/home/wins/wins_chart.dart';
 import 'package:oblio/widgets/home/wins/wins_chips.dart';
 import 'package:oblio/widgets/home/wins/wins_legend.dart';
-import 'package:oblio/widgets/home/wins/wins_sub.dart';
-import 'package:oblio/widgets/home/wins/wins_title.dart';
-
 
 class WinsWidets extends StatelessWidget {
   const WinsWidets({Key? key}) : super(key: key);
@@ -13,15 +13,19 @@ class WinsWidets extends StatelessWidget {
     return IntrinsicHeight(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          WinsTitle(),
-          SizedBox(height: 5),
-          WinsSub(),
+          CommonTitle(title: 'OPPORTUNITY WINS'),
+          SizedBox(height: 15),
+          CommonSubtitle(
+              subtitle: 'TEAM WINS',
+              filterone: 'MONTHLY',
+              filtertwo: Container()),
           SizedBox(height: 15),
           WinsChips(),
           WinsLegend(),
-          
+          SizedBox(height: 17),
+          WinsChart(),
         ],
       ),
     );

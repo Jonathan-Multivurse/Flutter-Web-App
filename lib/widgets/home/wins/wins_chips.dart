@@ -40,7 +40,7 @@ class _WinsChipsState extends State<WinsChips> {
           ],
           stops: [
             0.0,
-            0.1,
+            0.2,
             0.9,
             1.0
           ], // 10% purple, 80% transparent, 10% purple
@@ -53,6 +53,9 @@ class _WinsChipsState extends State<WinsChips> {
           scrollDirection: Axis.horizontal,
           children: [
             InkWell(
+              hoverColor: Colors.transparent,
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () {
                 setState(() {
                   chipColor[0] = chipColor[0] == HexColor('#dcdcdc')
@@ -85,6 +88,9 @@ class _WinsChipsState extends State<WinsChips> {
             ),
             SizedBox(width: 10),
             InkWell(
+              hoverColor: Colors.transparent,
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () {
                 setState(() {
                   chipColor[1] = chipColor[1] == HexColor('#dcdcdc')
@@ -117,6 +123,9 @@ class _WinsChipsState extends State<WinsChips> {
             ),
             SizedBox(width: 10),
             InkWell(
+              hoverColor: Colors.transparent,
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () {
                 setState(() {
                   chipColor[2] = chipColor[2] == HexColor('#dcdcdc')
@@ -151,6 +160,9 @@ class _WinsChipsState extends State<WinsChips> {
             ),
             SizedBox(width: 10),
             InkWell(
+              hoverColor: Colors.transparent,
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () {
                 setState(() {
                   chipColor[3] = chipColor[3] == HexColor('#dcdcdc')

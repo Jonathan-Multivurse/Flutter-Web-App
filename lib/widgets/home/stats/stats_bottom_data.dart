@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widgets/home/cus_chip.dart';
-import 'package:oblio/widgets/home/mql_chip.dart';
-import 'package:oblio/widgets/home/stats_num_data.dart';
+import 'package:oblio/widgets/home/stats/stats_cus_chip.dart';
+import 'package:oblio/widgets/home/stats/stats_mql_chip.dart';
+import 'package:oblio/widgets/home/stats/stats_num_data.dart';
 
 
 class StatsBottomData extends StatelessWidget {

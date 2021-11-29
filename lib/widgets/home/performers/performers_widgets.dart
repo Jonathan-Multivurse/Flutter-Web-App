@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widgets/home/performers_details.dart';
-import 'package:oblio/widgets/home/performers_divider.dart';
-import 'package:oblio/widgets/home/performers_sub.dart';
-import 'package:oblio/widgets/home/performers_title.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/widgets/home/common/common_subtitle.dart';
+import 'package:oblio/widgets/home/common/common_title.dart';
+import 'package:oblio/widgets/home/performers/performers_details.dart';
+import 'package:oblio/widgets/home/performers/performers_divider.dart';
 
 class PerformersWidgets extends StatelessWidget {
   const PerformersWidgets({Key? key}) : super(key: key);
@@ -15,8 +17,14 @@ class PerformersWidgets extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          PerformanceTitle(),
-          PerformersSub(),
+          CommonTitle(title: 'TOP PERFORMERS'),
+          SizedBox(
+            height: 20,
+          ),
+          CommonSubtitle(
+              subtitle: 'TOP PERSONAL',
+              filterone: 'THIS MONTH',
+              filtertwo: Container()),
           SizedBox(
             height: 20,
           ),

@@ -3,20 +3,21 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/widget-models/text_model.dart';
 import 'package:oblio/widgets/home/common/common_subtitle.dart';
 import 'package:oblio/widgets/home/common/common_title.dart';
-import 'package:oblio/widgets/home/owned/owned_opp_expansion_list.dart';
+import 'package:oblio/widgets/home/scheduled/scheduled_circular.dart';
 
-class OwnedOppWidets extends StatelessWidget {
-  const OwnedOppWidets({Key? key}) : super(key: key);
+class ScheduledWidets extends StatelessWidget {
+  const ScheduledWidets({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
+    return Container(
+      height: 350,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CommonTitle(title: 'OWNED OPPORTUNITIES'),
-          SizedBox(height: 15),
+          CommonTitle(title: 'SCHEDULED TASKS'),
+          SizedBox(height: 20),
           CommonSubtitle(
             subtitle: 'SALES TEAM',
             filterone: 'THIS MONTH',
@@ -34,8 +35,8 @@ class OwnedOppWidets extends StatelessWidget {
               textDirection: TextDirection.ltr,
             ),
           ),
-          SizedBox(height: 5),
-          OwnedOppExpansionList()
+          SizedBox(height: 10),
+          ScheduledCircular(),
         ],
       ),
     );

@@ -23,7 +23,7 @@ class WinsLegend extends StatelessWidget {
                     child: Container(),
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                      color: HexColor('#435BD9'),
+                      color: HexColor('#8FA1EC'),
                       borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
@@ -50,7 +50,7 @@ class WinsLegend extends StatelessWidget {
                     child: Container(),
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                      color: HexColor('#FDAF4C'),
+                      color: HexColor('#FDB653'),
                       borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
@@ -69,7 +69,7 @@ class WinsLegend extends StatelessWidget {
                     textDirection: TextDirection.ltr)
               ],
             ),
-             Row(
+            Row(
               children: [
                 CircularFrameModel(
                     height: 10,
@@ -77,7 +77,7 @@ class WinsLegend extends StatelessWidget {
                     child: Container(),
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                      color: HexColor('#FDAF4C'),
+                      color: HexColor('#FF8787'),
                       borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
@@ -90,13 +90,13 @@ class WinsLegend extends StatelessWidget {
                     )),
                 SizedBox(width: 5),
                 TextModel(
-                    data: 'SQL',
+                    data: 'CUS',
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)
               ],
             ),
-             Row(
+            Row(
               children: [
                 CircularFrameModel(
                     height: 10,
@@ -104,7 +104,7 @@ class WinsLegend extends StatelessWidget {
                     child: Container(),
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                      color: HexColor('#FDAF4C'),
+                      color: HexColor('#34CA87'),
                       borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
@@ -117,7 +117,7 @@ class WinsLegend extends StatelessWidget {
                     )),
                 SizedBox(width: 5),
                 TextModel(
-                    data: 'SQL',
+                    data: 'RET',
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)

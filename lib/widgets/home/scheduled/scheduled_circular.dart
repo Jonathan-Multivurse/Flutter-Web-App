@@ -4,8 +4,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/scheduled/scheduled_cubit.dart';
 import 'package:oblio/widget-models/circular_frame_model.dart';
 import 'package:oblio/widget-models/text_model.dart';
-import 'package:oblio/widgets/home/scheduled_arc.dart';
-import 'package:oblio/widgets/home/scheduled_numbers.dart';
+import 'package:oblio/widgets/home/scheduled/scheduled_arc.dart';
+import 'package:oblio/widgets/home/scheduled/scheduled_numbers.dart';
 
 class ScheduledCircular extends StatefulWidget {
   const ScheduledCircular({Key? key}) : super(key: key);
