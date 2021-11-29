@@ -18,7 +18,7 @@ class RankIcon extends StatelessWidget {
             color: Colors.white,
           ),
           decoration: BoxDecoration(
-              color: HexColor('#435BD9'),
+              color: HexColor('#5F78E4'),
               borderRadius: BorderRadius.circular(30))),
     );
   }

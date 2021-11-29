@@ -34,7 +34,7 @@ class OwnedOppExpansionList extends StatelessWidget {
         children: [
           OwnedOppTile(
             title: 'Standard Membership',
-            color: HexColor('#8FA1EC'),
+            color: HexColor('#5F78E4'),
           ),
           OwnedOppTile(
             title: 'Enbterprise Membership',
@@ -42,7 +42,7 @@ class OwnedOppExpansionList extends StatelessWidget {
           ),
           OwnedOppTile(
             title: 'Standard Membership',
-            color: HexColor('#8FA1EC'),
+            color: HexColor('#5F78E4'),
           ),
           OwnedOppTile(
             title: 'Enbterprise Membership',
@@ -54,7 +54,7 @@ class OwnedOppExpansionList extends StatelessWidget {
               children: [
                 OwnedOppTile(
                   title: 'Standard Membership',
-                  color: HexColor('#8FA1EC'),
+                  color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
                   title: 'Enbterprise Membership',
@@ -62,7 +62,7 @@ class OwnedOppExpansionList extends StatelessWidget {
                 ),
                 OwnedOppTile(
                   title: 'Standard Membership',
-                  color: HexColor('#8FA1EC'),
+                  color: HexColor('#5F78E4'),
                 ),
               ],
             ),

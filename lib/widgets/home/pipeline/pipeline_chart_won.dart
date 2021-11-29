@@ -30,7 +30,7 @@ class PipelineChartWon extends StatelessWidget {
                   } else if (index == 2) {
                     return HexColor('#FDB653');
                   } else if (index == 3) {
-                    return HexColor('#8FA1EC');
+                    return HexColor('#5F78E4');
                   }
                 },
                 cornerStyle: CornerStyle.bothCurve,

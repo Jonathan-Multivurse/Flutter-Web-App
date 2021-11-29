@@ -35,7 +35,7 @@ class PipelineDrawer extends StatelessWidget {
               PipelineExpansion(
                   percentNum: 0.5,
                   percentText: '50',
-                  color: HexColor('#8FA1EC'),
+                  color: HexColor('#5F78E4'),
                   title: 'MQL Opportunities',
                   subtitle: '20 out of 60',
                   children: []),

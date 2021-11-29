@@ -15,7 +15,8 @@ class ScheduledCircular extends StatefulWidget {
 }
 
 class _ScheduledCircularState extends State<ScheduledCircular> {
-  int menu = 0;
+  int menu = 5;
+
   @override
   Widget build(BuildContext context) {
     List<IconData> iconItems = [

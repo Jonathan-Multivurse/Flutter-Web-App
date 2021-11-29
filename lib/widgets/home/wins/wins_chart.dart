@@ -97,7 +97,7 @@ class _WinsChartState extends State<WinsChart> {
                           dataSource: chatData(),
                           xValueMapper: (WinsData wins, _) => wins.week,
                           yValueMapper: (WinsData wins, _) => wins.res,
-                          color: HexColor('#8FA1EC'),
+                          color: HexColor('#5F78E4'),
                         ),
                         StackedBarSeries<WinsData, String>(
                           dataSource: chatData(),
