@@ -18,7 +18,7 @@ class StatsNumData extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: HexColor('#5F78E4'),
-                  fontSize: 13,
+                  fontSize: 12,
                   fontWeight: FontWeight.w600),
             ),
           ),

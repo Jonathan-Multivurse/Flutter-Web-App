@@ -11,8 +11,8 @@ class CommonTitle extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(top: 20, left: 15),
       child: TextModel(
-        data: title,
-        style: oblioTheme.textTheme.headline4!,
+        data: title.toUpperCase(),
+        style: oblioTheme.primaryTextTheme.headline3!,
         textAlign: TextAlign.left,
         textDirection: TextDirection.ltr,
       ),

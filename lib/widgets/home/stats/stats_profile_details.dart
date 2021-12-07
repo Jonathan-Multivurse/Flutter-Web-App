@@ -13,13 +13,13 @@ class StatsProfileDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TextModel(
-          data: 'Mike Hunt',
+          data: 'Mike Hunt'.toUpperCase(),
           style: oblioTheme.textTheme.button!,
           textAlign: TextAlign.left,
           textDirection: TextDirection.ltr,
         ),
         TextModel(
-          data: 'Marketing Junior',
+          data: 'Marketing Junior'.toUpperCase(),
           style: oblioTheme.textTheme.overline!,
           textAlign: TextAlign.left,
           textDirection: TextDirection.ltr,

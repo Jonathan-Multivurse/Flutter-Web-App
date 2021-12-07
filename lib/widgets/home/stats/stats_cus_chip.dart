@@ -17,8 +17,9 @@ class StatsCusChip extends StatelessWidget {
             '12.2% CUS',
             style: TextStyle(
               color: HexColor('#D28E62'),
-              fontSize: 13,
+              fontSize: 12,
               letterSpacing: 0.2,
+              height: 2,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w500,
               fontStyle: FontStyle.normal,

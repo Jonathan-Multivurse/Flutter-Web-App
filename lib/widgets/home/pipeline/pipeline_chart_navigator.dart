@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widgets/home/pipeline/pipeline_chart_open.dart';
 import 'package:oblio/widgets/home/pipeline/pipeline_chart_won.dart';
 
@@ -43,19 +44,25 @@ class _PipelineChartNavigatorState extends State<PipelineChartNavigator>
               height: 40,
               child: TabBar(
                 controller: _tabController,
-                tabs: const <Widget>[
+                tabs: <Widget>[
                   Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: Text('OPEN'),
+                    child: Text(
+                      'OPEN',
+                      style: oblioTheme.textTheme.overline!,
+                    ),
                   ),
                   Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: Text('WON'),
+                    child: Text(
+                      'WON',
+                      style: oblioTheme.textTheme.overline!,
+                    ),
                   ),
                 ],
                 indicator: UnderlineTabIndicator(
                   borderSide:
-                      BorderSide(color: HexColor('#435BD9'), width: 2.0),
+                      BorderSide(color: HexColor('#5F78E4'), width: 2.0),
                 ),
               ),
             ),

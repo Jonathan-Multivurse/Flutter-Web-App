@@ -16,8 +16,8 @@ class RankWidgets extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextModel(
-            data: 'RANK',
-            style: oblioTheme.textTheme.headline4!,
+            data: 'Rank'.toUpperCase(),
+            style: oblioTheme.primaryTextTheme.headline4!,
             textAlign: TextAlign.left,
             textDirection: TextDirection.ltr,
           ),

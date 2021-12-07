@@ -16,8 +16,8 @@ class TaskWidgets extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextModel(
-            data: 'TASKS',
-            style: oblioTheme.textTheme.headline4!,
+            data: 'Tasks'.toUpperCase(),
+            style: oblioTheme.primaryTextTheme.headline4!,
             textAlign: TextAlign.left,
             textDirection: TextDirection.ltr,
           ),

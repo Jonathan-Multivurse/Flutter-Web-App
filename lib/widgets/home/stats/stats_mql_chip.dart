@@ -17,8 +17,9 @@ class StatsMqlChip extends StatelessWidget {
             '19.3% MQL',
             style: TextStyle(
               color: HexColor('#0EBB6A'),
-              fontSize: 13,
+              fontSize: 12,
               letterSpacing: 0.2,
+              height: 2,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w500,
               fontStyle: FontStyle.normal,

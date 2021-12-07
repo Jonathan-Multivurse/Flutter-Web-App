@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/scheduled/scheduled_cubit.dart';
+import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/circular_frame_model.dart';
 import 'package:oblio/widget-models/text_model.dart';
 import 'package:oblio/widgets/home/scheduled/scheduled_arc.dart';
@@ -140,7 +141,7 @@ class _ScheduledCircularState extends State<ScheduledCircular> {
                               borderRadius: BorderRadius.circular(20)),
                           child: TextModel(
                             data: 'PREV',
-                            style: TextStyle(color: Colors.grey[500]),
+                            style: oblioTheme.primaryTextTheme.headline6!,
                             textAlign: TextAlign.center,
                             textDirection: TextDirection.ltr,
                           ),
@@ -184,7 +185,7 @@ class _ScheduledCircularState extends State<ScheduledCircular> {
                               borderRadius: BorderRadius.circular(20)),
                           child: TextModel(
                             data: 'NEXT',
-                            style: TextStyle(color: Colors.grey[500]),
+                            style: oblioTheme.primaryTextTheme.headline6!,
                             textAlign: TextAlign.center,
                             textDirection: TextDirection.ltr,
                           ),

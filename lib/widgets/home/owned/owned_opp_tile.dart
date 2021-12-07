@@ -48,7 +48,7 @@ class OwnedOppTile extends StatelessWidget {
               ),
             ],
           ),
-          title: Text(title, style: oblioTheme.textTheme.headline4),
+          title: Text(title, style: oblioTheme.primaryTextTheme.headline2),
           subtitle: Row(
             children: [
               Text(

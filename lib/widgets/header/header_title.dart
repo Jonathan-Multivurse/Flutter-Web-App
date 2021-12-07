@@ -32,11 +32,30 @@ class HomeHeaderTitle extends StatelessWidget {
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,
               ),
-              TextModel(
-                data: 'Marketing . Junior',
-                style: oblioTheme.textTheme.headline5!,
-                textAlign: TextAlign.center,
-                textDirection: TextDirection.ltr,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Marketing'.toUpperCase(),
+                    style: oblioTheme.primaryTextTheme.headline4!,
+                    textAlign: TextAlign.center,
+                    textDirection: TextDirection.ltr,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Icon(
+                      Icons.fiber_manual_record,
+                      size: 6,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  Text(
+                    'Junior'.toUpperCase(),
+                    style: oblioTheme.primaryTextTheme.headline4!,
+                    textAlign: TextAlign.center,
+                    textDirection: TextDirection.ltr,
+                  ),
+                ],
               ),
             ],
           ),

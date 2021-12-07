@@ -33,7 +33,9 @@ class PerformersWidgets extends StatelessWidget {
             image: AssetImage(
               'lib/assets/images/1.0x/avatar1.png',
             ),
-            title: 'SALES . SENIOR . GAMMA',
+            title: 'SALES',
+            title2: 'SENIOR',
+            title3: 'GAMMA',
             name: 'Scott Byler',
             numdata: '322',
           ),
@@ -43,7 +45,9 @@ class PerformersWidgets extends StatelessWidget {
             image: AssetImage(
               'lib/assets/images/1.0x/avatar2.png',
             ),
-            title: 'HR . SENIOR . GAMMA',
+            title: 'HR',
+            title2: 'SENIOR',
+            title3: 'GAMMA',
             name: 'Halima Sterling',
             numdata: '309',
           ),
@@ -53,7 +57,9 @@ class PerformersWidgets extends StatelessWidget {
             image: AssetImage(
               'lib/assets/images/1.0x/avatar3.png',
             ),
-            title: 'Marketing . SENIOR . GAMMA',
+            title: 'MARKETING',
+            title2: 'SENIOR',
+            title3: 'GAMMA',
             name: 'Sara Jones',
             numdata: '286',
           ),

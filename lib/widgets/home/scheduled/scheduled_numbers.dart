@@ -24,7 +24,7 @@ class ScheduledNumbers extends StatelessWidget {
               )),
               TextModel(
                 data: 'OPEN',
-                style: oblioTheme.textTheme.overline!,
+                style: oblioTheme.primaryTextTheme.headline6!,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,
               ),
@@ -41,7 +41,7 @@ class ScheduledNumbers extends StatelessWidget {
               )),
               TextModel(
                 data: 'CLOSED',
-                style: oblioTheme.textTheme.overline!,
+                style: oblioTheme.primaryTextTheme.headline6!,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,
               ),

@@ -23,8 +23,8 @@ class CommonSubtitle extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextModel(
-              data: subtitle,
-              style: oblioTheme.textTheme.overline!,
+              data: subtitle.toUpperCase(),
+              style: oblioTheme.primaryTextTheme.headline6!,
               textAlign: TextAlign.left,
               textDirection: TextDirection.ltr,
             ),

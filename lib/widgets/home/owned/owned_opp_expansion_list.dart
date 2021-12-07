@@ -33,19 +33,19 @@ class OwnedOppExpansionList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           OwnedOppTile(
-            title: 'Standard Membership',
+            title: 'Standard Membership'.toUpperCase(),
             color: HexColor('#5F78E4'),
           ),
           OwnedOppTile(
-            title: 'Enbterprise Membership',
+            title: 'Enterprise Membership'.toUpperCase(),
             color: HexColor('#FDB653'),
           ),
           OwnedOppTile(
-            title: 'Standard Membership',
+            title: 'Standard Membership'.toUpperCase(),
             color: HexColor('#5F78E4'),
           ),
           OwnedOppTile(
-            title: 'Enbterprise Membership',
+            title: 'Enterprise Membership'.toUpperCase(),
             color: HexColor('#FDB653'),
           ),
           Visibility(
@@ -53,15 +53,15 @@ class OwnedOppExpansionList extends StatelessWidget {
             child: Column(
               children: [
                 OwnedOppTile(
-                  title: 'Standard Membership',
+                  title: 'Standard Membership'.toUpperCase(),
                   color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
-                  title: 'Enbterprise Membership',
+                  title: 'Enterprise Membership'.toUpperCase(),
                   color: HexColor('#FDB653'),
                 ),
                 OwnedOppTile(
-                  title: 'Standard Membership',
+                  title: 'Standard Membership'.toUpperCase(),
                   color: HexColor('#5F78E4'),
                 ),
               ],
