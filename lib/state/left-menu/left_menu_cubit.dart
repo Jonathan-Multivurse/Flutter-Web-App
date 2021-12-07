@@ -10,7 +10,7 @@ class LeftMenuCubit extends Cubit<String> {
   void opportunities() => emit('opportunities');
   void accounts() => emit('accounts');
   void contacts() => emit('contacts');
-  void campaings() => emit('campaings');
+  void campaings() => emit('campaigns');
   void creatives() => emit('creatives');
   void workflows() => emit('workflows');
   void products() => emit('products');

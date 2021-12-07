@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
+import 'package:oblio/state/left-menu/left_menu_cubit.dart';
 import 'package:oblio/widget-models/fab_button_model.dart';
 import 'package:oblio/widget-models/tile_model.dart';
 
@@ -92,6 +93,33 @@ class _LeftMenuState extends State<LeftMenu> {
                             setState(() {
                               _selectedIndex = index;
                             });
+                            if (index == 0) {
+                              return context.read<LeftMenuCubit>().home();
+                            } else if (index == 1) {
+                              return context.read<LeftMenuCubit>().calendar();
+                            } else if (index == 2) {
+                              return context.read<LeftMenuCubit>().todos();
+                            } else if (index == 3) {
+                              return context.read<LeftMenuCubit>().teams();
+                            } else if (index == 4) {
+                              return context
+                                  .read<LeftMenuCubit>()
+                                  .opportunities();
+                            } else if (index == 5) {
+                              return context.read<LeftMenuCubit>().accounts();
+                            } else if (index == 6) {
+                              return context.read<LeftMenuCubit>().contacts();
+                            } else if (index == 7) {
+                              return context.read<LeftMenuCubit>().campaings();
+                            } else if (index == 8) {
+                              return context.read<LeftMenuCubit>().creatives();
+                            } else if (index == 9) {
+                              return context.read<LeftMenuCubit>().workflows();
+                            } else if (index == 10) {
+                              return context.read<LeftMenuCubit>().products();
+                            } else if (index == 11) {
+                              return context.read<LeftMenuCubit>().employees();
+                            }
                           },
                           selected: index == _selectedIndex);
                     },
@@ -101,9 +129,9 @@ class _LeftMenuState extends State<LeftMenu> {
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.only(top: 10, left: 8),
                   child: FabButtonModel(
-                    elevation: 2,
-                    hoverElevation: 1,
-                    hover: HexColor('#fff'),
+                      elevation: 2,
+                      hoverElevation: 1,
+                      hover: HexColor('#fff'),
                       onPressed: () {
                         collapseState == false
                             ? context.read<CollapseCubit>().collapse()
