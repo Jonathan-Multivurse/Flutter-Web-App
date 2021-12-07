@@ -26,31 +26,14 @@ class OwnedOppExpansionList extends StatelessWidget {
           ? context.read<OwnedOppCubit>().show()
           : context.read<OwnedOppCubit>().hide();
       title() => ownedState == false ? 'Expand' : 'Collapse';
-      visibility() => ownedState == false ? false : true;
+      expansion() => ownedState == false ? 400.0 : 700.0;
 
       return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          OwnedOppTile(
-            title: 'Standard Membership'.toUpperCase(),
-            color: HexColor('#5F78E4'),
-          ),
-          OwnedOppTile(
-            title: 'Enterprise Membership'.toUpperCase(),
-            color: HexColor('#FDB653'),
-          ),
-          OwnedOppTile(
-            title: 'Standard Membership'.toUpperCase(),
-            color: HexColor('#5F78E4'),
-          ),
-          OwnedOppTile(
-            title: 'Enterprise Membership'.toUpperCase(),
-            color: HexColor('#FDB653'),
-          ),
-          Visibility(
-            visible: visibility(),
-            child: Column(
+          Container(
+            height: expansion(),
+            child: ListView(
+              shrinkWrap: true,
               children: [
                 OwnedOppTile(
                   title: 'Standard Membership'.toUpperCase(),
@@ -63,6 +46,42 @@ class OwnedOppExpansionList extends StatelessWidget {
                 OwnedOppTile(
                   title: 'Standard Membership'.toUpperCase(),
                   color: HexColor('#5F78E4'),
+                ),
+                OwnedOppTile(
+                  title: 'Enterprise Membership'.toUpperCase(),
+                  color: HexColor('#FDB653'),
+                ),
+                OwnedOppTile(
+                  title: 'Standard Membership'.toUpperCase(),
+                  color: HexColor('#5F78E4'),
+                ),
+                OwnedOppTile(
+                  title: 'Enterprise Membership'.toUpperCase(),
+                  color: HexColor('#FDB653'),
+                ),
+                OwnedOppTile(
+                  title: 'Standard Membership'.toUpperCase(),
+                  color: HexColor('#5F78E4'),
+                ),
+                OwnedOppTile(
+                  title: 'Enterprise Membership'.toUpperCase(),
+                  color: HexColor('#FDB653'),
+                ),
+                OwnedOppTile(
+                  title: 'Standard Membership'.toUpperCase(),
+                  color: HexColor('#5F78E4'),
+                ),
+                OwnedOppTile(
+                  title: 'Enterprise Membership'.toUpperCase(),
+                  color: HexColor('#FDB653'),
+                ),
+                OwnedOppTile(
+                  title: 'Standard Membership'.toUpperCase(),
+                  color: HexColor('#5F78E4'),
+                ),
+                OwnedOppTile(
+                  title: 'Enterprise Membership'.toUpperCase(),
+                  color: HexColor('#FDB653'),
                 ),
               ],
             ),
