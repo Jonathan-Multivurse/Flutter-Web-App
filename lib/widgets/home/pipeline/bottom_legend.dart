@@ -36,7 +36,7 @@ class PipelineBottomLegend extends StatelessWidget {
                     )),
                 SizedBox(height: 5),
                 TextModel(
-                    data: 'CUS',
+                    data: 'Cus'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)
@@ -63,7 +63,7 @@ class PipelineBottomLegend extends StatelessWidget {
                     )),
                 SizedBox(height: 5),
                 TextModel(
-                    data: 'RET',
+                    data: 'Ret'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)

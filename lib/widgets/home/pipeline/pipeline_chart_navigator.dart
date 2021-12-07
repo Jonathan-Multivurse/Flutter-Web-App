@@ -48,14 +48,14 @@ class _PipelineChartNavigatorState extends State<PipelineChartNavigator>
                   Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'OPEN',
+                      'Open'.toUpperCase(),
                       style: oblioTheme.textTheme.overline!,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'WON',
+                      'Won'.toUpperCase(),
                       style: oblioTheme.textTheme.overline!,
                     ),
                   ),

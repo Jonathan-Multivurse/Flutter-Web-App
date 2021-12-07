@@ -140,7 +140,7 @@ class _ScheduledCircularState extends State<ScheduledCircular> {
                               color: HexColor('#5F78E4').withOpacity(0.1),
                               borderRadius: BorderRadius.circular(20)),
                           child: TextModel(
-                            data: 'PREV',
+                            data: 'Prev'.toUpperCase(),
                             style: oblioTheme.primaryTextTheme.headline6!,
                             textAlign: TextAlign.center,
                             textDirection: TextDirection.ltr,
@@ -184,7 +184,7 @@ class _ScheduledCircularState extends State<ScheduledCircular> {
                               color: HexColor('#5F78E4').withOpacity(0.1),
                               borderRadius: BorderRadius.circular(20)),
                           child: TextModel(
-                            data: 'NEXT',
+                            data: 'Next'.toUpperCase(),
                             style: oblioTheme.primaryTextTheme.headline6!,
                             textAlign: TextAlign.center,
                             textDirection: TextDirection.ltr,

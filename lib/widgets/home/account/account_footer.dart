@@ -16,7 +16,7 @@ class AccountFooter extends StatelessWidget {
             InkWell(
               onTap: (){},
               child: TextModel(
-                data: 'PRIVACY POLICY',
+                data: 'Privacy Policy'.toUpperCase(),
                 style: oblioTheme.textTheme.caption!,
                 textAlign: TextAlign.left,
                 textDirection: TextDirection.ltr,
@@ -26,7 +26,7 @@ class AccountFooter extends StatelessWidget {
             InkWell(
               onTap: (){},
               child: TextModel(
-                data: 'TERMS OF SERVICE',
+                data: 'Terms of Service'.toUpperCase(),
                 style: oblioTheme.textTheme.caption!,
                 textAlign: TextAlign.left,
                 textDirection: TextDirection.ltr,

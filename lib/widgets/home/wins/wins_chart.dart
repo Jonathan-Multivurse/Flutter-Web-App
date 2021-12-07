@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/state/pipeline-drawer/pipeline_drawer.dart';
 import 'package:oblio/state/wins-opp/wins_opp.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 

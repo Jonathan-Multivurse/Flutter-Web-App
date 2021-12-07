@@ -36,7 +36,7 @@ class PipelineTopLegend extends StatelessWidget {
                     )),
                 SizedBox(height: 5),
                 TextModel(
-                    data: 'MQL',
+                    data: 'Mql'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)
@@ -63,7 +63,7 @@ class PipelineTopLegend extends StatelessWidget {
                     )),
                 SizedBox(height: 5),
                 TextModel(
-                    data: 'SQL',
+                    data: 'Sql'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)

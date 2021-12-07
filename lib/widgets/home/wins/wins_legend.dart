@@ -36,7 +36,7 @@ class WinsLegend extends StatelessWidget {
                     )),
                 SizedBox(width: 5),
                 TextModel(
-                    data: 'MQL',
+                    data: 'Mql'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)
@@ -63,7 +63,7 @@ class WinsLegend extends StatelessWidget {
                     )),
                 SizedBox(width: 5),
                 TextModel(
-                    data: 'SQL',
+                    data: 'Sql'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)
@@ -90,7 +90,7 @@ class WinsLegend extends StatelessWidget {
                     )),
                 SizedBox(width: 5),
                 TextModel(
-                    data: 'CUS',
+                    data: 'Cus'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)
@@ -117,7 +117,7 @@ class WinsLegend extends StatelessWidget {
                     )),
                 SizedBox(width: 5),
                 TextModel(
-                    data: 'RET',
+                    data: 'Ret'.toUpperCase(),
                     style: oblioTheme.textTheme.overline!,
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.ltr)

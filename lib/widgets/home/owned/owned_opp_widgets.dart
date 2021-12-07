@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/widget-models/text_model.dart';
 import 'package:oblio/widgets/home/common/common_subtitle.dart';
 import 'package:oblio/widgets/home/common/common_title.dart';
 import 'package:oblio/widgets/home/owned/owned_opp_expansion_list.dart';
 
-class OwnedOppWidets extends StatelessWidget {
+class OwnedOppWidets extends StatefulWidget {
   const OwnedOppWidets({Key? key}) : super(key: key);
 
+  @override
+  State<OwnedOppWidets> createState() => _OwnedOppWidetsState();
+}
+
+class _OwnedOppWidetsState extends State<OwnedOppWidets> {
+  String dropdownValue = "All Time";
+  List list = <String>['Day', 'Week', 'Month', 'Quarter', 'Year', 'All Time'];
   @override
   Widget build(BuildContext context) {
     return IntrinsicHeight(
@@ -15,23 +20,28 @@ class OwnedOppWidets extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CommonTitle(title: 'OWNED OPPORTUNITIES'),
+          CommonTitle(title: 'Owned Opportunities'.toUpperCase()),
           SizedBox(height: 15),
           CommonSubtitle(
-            subtitle: 'SALES TEAM',
-            filterone: 'THIS MONTH',
-            filtertwo: TextModel(
-              data: 'ALL TIME',
-              style: TextStyle(
-                color: HexColor('#435BD9'),
-                fontSize: 11,
-                letterSpacing: 0.2,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w500,
-                fontStyle: FontStyle.normal,
-              ),
-              textAlign: TextAlign.left,
-              textDirection: TextDirection.ltr,
+            subtitle: 'Sales Team'.toUpperCase(),
+            dropdown: DropdownButton<String>(
+              isDense: true,
+              dropdownColor: Colors.white,
+              value: dropdownValue,
+              elevation: 1,
+              underline: Container(color: Colors.transparent),
+              style: TextStyle(color: Colors.blue[500], fontSize: 12),
+              onChanged: (newValue) {
+                setState(() {
+                  dropdownValue = newValue!;
+                });
+              },
+              items: list.map<DropdownMenuItem<String>>((value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
             ),
           ),
           SizedBox(height: 5),

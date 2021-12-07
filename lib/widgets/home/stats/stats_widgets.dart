@@ -20,7 +20,7 @@ class StatsWidgets extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CommonTitle(title: 'YOUR STATS'),
+          CommonTitle(title: 'Your Stats'.toUpperCase()),
           SizedBox(
             height: 10,
           ),

@@ -21,7 +21,7 @@ class OwnedOppTile extends StatelessWidget {
           tags: Row(
             children: [
               Text(
-                'OPEN',
+                'Open'.toUpperCase(),
                 style: oblioTheme.textTheme.caption,
               ),
               Padding(
@@ -32,7 +32,7 @@ class OwnedOppTile extends StatelessWidget {
                 ),
               ),
               Text(
-                'RENEWAL',
+                'Renewal'.toUpperCase(),
                 style: oblioTheme.textTheme.caption,
               ),
               Padding(
@@ -43,7 +43,7 @@ class OwnedOppTile extends StatelessWidget {
                 ),
               ),
               Text(
-                'IBM',
+                'Ibm'.toUpperCase(),
                 style: oblioTheme.textTheme.caption,
               ),
             ],
@@ -91,7 +91,7 @@ class OwnedOppTile extends StatelessWidget {
                 ],
               ),
               SizedBox(width: 15),
-              Text('NOV 10', style: oblioTheme.textTheme.caption),
+              Text('Nov 10'.toUpperCase(), style: oblioTheme.textTheme.caption),
             ],
           ),
           children: []),

@@ -23,7 +23,7 @@ class ScheduledNumbers extends StatelessWidget {
                 textDirection: TextDirection.ltr,
               )),
               TextModel(
-                data: 'OPEN',
+                data: 'Open'.toUpperCase(),
                 style: oblioTheme.primaryTextTheme.headline6!,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,
@@ -40,7 +40,7 @@ class ScheduledNumbers extends StatelessWidget {
                 textDirection: TextDirection.ltr,
               )),
               TextModel(
-                data: 'CLOSED',
+                data: 'Closed'.toUpperCase(),
                 style: oblioTheme.primaryTextTheme.headline6!,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,

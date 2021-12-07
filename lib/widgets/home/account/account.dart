@@ -45,7 +45,7 @@ class AccountCard extends StatelessWidget {
               ),
               SizedBox(height: 10),
               TextModel(
-                data: 'Mike Hunt',
+                data: 'Mike Hunt'.toUpperCase(),
                 style: oblioTheme.textTheme.headline3!,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,
@@ -62,7 +62,7 @@ class AccountCard extends StatelessWidget {
                 height: 60,
                 width: 220,
                 padding: EdgeInsets.all(5),
-                name: 'MANAGE YOUR ACCOUNT',
+                name: 'Manage Your Account'.toUpperCase(),
                 textStyle: oblioTheme.textTheme.overline!,
                 onPressed: () {},
                 style: ButtonStyle(
@@ -87,7 +87,7 @@ class AccountCard extends StatelessWidget {
                 height: 60,
                 width: 220,
                 padding: EdgeInsets.all(5),
-                name: 'SIGN OUT',
+                name: 'Sign Out'.toUpperCase(),
                 textStyle: oblioTheme.primaryTextTheme.overline!,
                 onPressed: () {
                   Navigator.pushNamed(context, AuthenticationRoute);

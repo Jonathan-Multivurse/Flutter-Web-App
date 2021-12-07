@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/text_model.dart';
 
 class CommonSubtitle extends StatelessWidget {
   final String subtitle;
-  final String filterone;
-  final Widget filtertwo;
+  final Widget dropdown;
+
   const CommonSubtitle({
     Key? key,
     required this.subtitle,
-    required this.filterone,
-    required this.filtertwo,
+    required this.dropdown,
   }) : super(key: key);
 
   @override
@@ -31,20 +29,7 @@ class CommonSubtitle extends StatelessWidget {
             Expanded(
               child: Container(),
             ),
-            TextModel(
-              data: filterone,
-              style: TextStyle(
-                color: HexColor('#435BD9'),
-                fontSize: 11,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w500,
-                fontStyle: FontStyle.normal,
-              ),
-              textAlign: TextAlign.left,
-              textDirection: TextDirection.ltr,
-            ),
-            SizedBox(width: 15),
-            filtertwo,
+            dropdown
           ],
         ));
   }

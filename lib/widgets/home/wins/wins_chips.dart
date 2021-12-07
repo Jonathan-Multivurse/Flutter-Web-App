@@ -72,7 +72,7 @@ class _WinsChipsState extends State<WinsChips> {
                   alignment: Alignment.center,
                   width: 80,
                   child: Text(
-                    'RES',
+                    'Res'.toUpperCase(),
                     style: TextStyle(
                       color: textColor[0],
                       fontSize: 12,
@@ -107,7 +107,7 @@ class _WinsChipsState extends State<WinsChips> {
                   alignment: Alignment.center,
                   width: 80,
                   child: Text(
-                    'CUS',
+                    'Cus'.toUpperCase(),
                     style: TextStyle(
                       color: textColor[1],
                       fontSize: 12,
@@ -143,7 +143,7 @@ class _WinsChipsState extends State<WinsChips> {
                   width: 80,
                   child: Center(
                     child: Text(
-                      'SQL',
+                      'Sql'.toUpperCase(),
                       style: TextStyle(
                         color: textColor[2],
                         fontSize: 12,
@@ -179,7 +179,7 @@ class _WinsChipsState extends State<WinsChips> {
                   alignment: Alignment.center,
                   width: 80,
                   child: Text(
-                    'MQL',
+                    'Mql'.toUpperCase(),
                     style: TextStyle(
                       color: textColor[3],
                       fontSize: 12,
