@@ -19,7 +19,7 @@ import 'package:page_transition/page_transition.dart';
 const String AuthenticationRoute = '/authentication';
 const String RegistrationRoute = '/registration';
 const String ResetpasswordRoute = '/reset-password';
-const String HomeRoute = '/home';
+const String HomeRoute = '/oblio';
 const String CalendarRoute = '/calendar';
 const String CampaignsRoute = '/campaigns';
 const String ContactsRoute = '/contacts';

@@ -64,6 +64,7 @@ class MainScreen extends StatelessWidget {
             ),
             body: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 LeftMenu(),
                 Container(child: screens()),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oblio/widgets/accounts/accounts.dart';
 
 class AccountsScreen extends StatefulWidget {
   const AccountsScreen({Key? key}) : super(key: key);
@@ -15,9 +16,11 @@ class _AccountsScreenState extends State<AccountsScreen> {
       child: Flexible(
         flex: 1,
         child: SingleChildScrollView(
-            child: Center(
-          child: Text('Accounts Screen'),
-        )),
+          child: Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, top: 30, bottom: 30),
+            child: AccountsWidgets(),
+          ),
+        ),
       ),
     );
   }
