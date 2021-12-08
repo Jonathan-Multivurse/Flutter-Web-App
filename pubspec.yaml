@@ -48,6 +48,8 @@ dependencies:
   flutter_staggered_grid_view: ^0.4.1
   syncfusion_flutter_charts: ^19.3.54
   percent_indicator: ^3.4.0
+  dependencies:
+  material_design_icons_flutter: ^5.0.6595
 
 dev_dependencies:
   flutter_native_splash: ^1.2.4

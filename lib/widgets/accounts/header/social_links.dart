@@ -16,10 +16,10 @@ class AccountSocialLinks extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: CircularFrameModel(
-          height: 30,
-          width: 30,
+          height: 35,
+          width: 35,
           padding: EdgeInsets.all(2),
-          child: Center(child: Icon(icon, size: 14, color: color)),
+          child: Center(child: Icon(icon, size: 20, color: color)),
           decoration: BoxDecoration(
               color: background, borderRadius: BorderRadius.circular(20))),
     );

@@ -36,51 +36,51 @@ class OwnedOppExpansionList extends StatelessWidget {
               shrinkWrap: true,
               children: [
                 OwnedOppTile(
-                  title: 'Standard Membership'.toUpperCase(),
+                  title: 'Standard Membership',
                   color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
-                  title: 'Enterprise Membership'.toUpperCase(),
+                  title: 'Enterprise Membership',
                   color: HexColor('#FDB653'),
                 ),
                 OwnedOppTile(
-                  title: 'Standard Membership'.toUpperCase(),
+                  title: 'Standard Membership',
                   color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
-                  title: 'Enterprise Membership'.toUpperCase(),
+                  title: 'Enterprise Membership',
                   color: HexColor('#FDB653'),
                 ),
                 OwnedOppTile(
-                  title: 'Standard Membership'.toUpperCase(),
+                  title: 'Standard Membership',
                   color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
-                  title: 'Enterprise Membership'.toUpperCase(),
+                  title: 'Enterprise Membership',
                   color: HexColor('#FDB653'),
                 ),
                 OwnedOppTile(
-                  title: 'Standard Membership'.toUpperCase(),
+                  title: 'Standard Membership',
                   color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
-                  title: 'Enterprise Membership'.toUpperCase(),
+                  title: 'Enterprise Membership',
                   color: HexColor('#FDB653'),
                 ),
                 OwnedOppTile(
-                  title: 'Standard Membership'.toUpperCase(),
+                  title: 'Standard Membership',
                   color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
-                  title: 'Enterprise Membership'.toUpperCase(),
+                  title: 'Enterprise Membership',
                   color: HexColor('#FDB653'),
                 ),
                 OwnedOppTile(
-                  title: 'Standard Membership'.toUpperCase(),
+                  title: 'Standard Membership',
                   color: HexColor('#5F78E4'),
                 ),
                 OwnedOppTile(
-                  title: 'Enterprise Membership'.toUpperCase(),
+                  title: 'Enterprise Membership',
                   color: HexColor('#FDB653'),
                 ),
               ],

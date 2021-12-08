@@ -3,6 +3,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/theme/colors.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widgets/accounts/header/social_links.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class OrgDetails extends StatelessWidget {
   const OrgDetails({Key? key}) : super(key: key);
@@ -14,18 +15,11 @@ class OrgDetails extends StatelessWidget {
         padding: EdgeInsets.all(25),
         height: 160,
         decoration: BoxDecoration(
-          color: oblioTheme.cardColor,
+          color: oblioTheme.canvasColor,
           borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.blueGrey.withOpacity(0.1),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: Offset(0, 1),
-            ),
-          ],
+          
         ),
         child: Container(
           child: Row(
@@ -184,23 +178,23 @@ class OrgDetails extends StatelessWidget {
                   Row(
                     children: [
                       AccountSocialLinks(
-                          icon: Icons.grid_goldenratio,
+                          icon: MdiIcons.viewCompact,
                           background: HexColor('#34CA87'),
                           color: Colors.white),
                       SizedBox(width: 10),
                       AccountSocialLinks(
-                          icon: Icons.mail,
-                          background: HexColor('#34CA87'),
+                          icon: MdiIcons.linkedin,
+                          background: HexColor('#2489BE'),
                           color: Colors.white),
                       SizedBox(width: 10),
                       AccountSocialLinks(
-                          icon: Icons.mail,
-                          background: HexColor('#34CA87'),
+                          icon: MdiIcons.twitter,
+                          background: HexColor('#2DAAE1'),
                           color: Colors.white),
                       SizedBox(width: 10),
                       AccountSocialLinks(
-                          icon: Icons.mail,
-                          background: HexColor('#34CA87'),
+                          icon: MdiIcons.facebook,
+                          background: HexColor('#1877F2'),
                           color: Colors.white),
                     ],
                   )
