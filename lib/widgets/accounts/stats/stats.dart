@@ -9,7 +9,7 @@ class AccountStats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CardModel(
-      height: 160,
+      height: 200,
       width: 350,
       decoration: BoxDecoration(
         color: HexColor('#5F78E4'),
