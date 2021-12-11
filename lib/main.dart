@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/app.dart';
 import 'package:oblio/routes/routes.dart';
+import 'package:oblio/state/account-opp/account_opp.dart';
+import 'package:oblio/state/account-related-contacts/acc-related-contacts.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
 import 'package:oblio/state/left-menu/left_menu_cubit.dart';
 import 'package:oblio/state/owned-opp/owned_opp.dart';
@@ -50,6 +52,12 @@ void main() {
       ),
       BlocProvider<WinsOppCubit>(
         create: (BuildContext context) => WinsOppCubit(),
+      ),
+      BlocProvider<AccRelatedContactsCubit>(
+        create: (BuildContext context) => AccRelatedContactsCubit(),
+      ),
+      BlocProvider<AccountOppCubit>(
+        create: (BuildContext context) => AccountOppCubit(),
       ),
     ],
     child: MaterialApp(

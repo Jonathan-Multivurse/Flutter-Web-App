@@ -6,6 +6,8 @@ import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widgets/accounts/common/long-card.dart';
 import 'package:oblio/widgets/accounts/common/short-card.dart';
 import 'package:oblio/widgets/accounts/header/header.dart';
+import 'package:oblio/widgets/accounts/opps/account_opp_widgets.dart';
+import 'package:oblio/widgets/accounts/related/related_contacts_widgets.dart';
 
 class AccountsWidgets extends StatefulWidget {
   const AccountsWidgets({Key? key}) : super(key: key);
@@ -95,11 +97,47 @@ class _AccountsWidgetsState extends State<AccountsWidgets>
                   ],
                 ),
                 Container(
-                  height: 1000,
+                  height: 1250,
+                  padding: EdgeInsets.only(left: 10, right: 10),
                   child: TabBarView(
                     controller: _tabController,
                     children: <Widget>[
                       Wrap(
+                        alignment: WrapAlignment.start,
+                        direction: Axis.horizontal,
+                        textDirection: TextDirection.ltr,
+                        runSpacing: 20,
+                        spacing: 20,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  AccountsShortCard(
+                                      child: RelatedContactsWidets()),
+                                  SizedBox(height: 25),
+                                  AccountsShortCard(child: AccountOppWidets()),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  AccountsLongCard(child: Container()),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  AccountsLongCard(child: Container()),
+                                ],
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      Wrap(
                         alignment: WrapAlignment.center,
                         direction: Axis.horizontal,
                         textDirection: TextDirection.ltr,
@@ -115,7 +153,7 @@ class _AccountsWidgetsState extends State<AccountsWidgets>
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   AccountsShortCard(child: Container()),
-                                  SizedBox(height: 35),
+                                  SizedBox(height: 25),
                                   AccountsShortCard(child: Container()),
                                 ],
                               ),
@@ -149,7 +187,7 @@ class _AccountsWidgetsState extends State<AccountsWidgets>
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   AccountsShortCard(child: Container()),
-                                  SizedBox(height: 35),
+                                  SizedBox(height: 25),
                                   AccountsShortCard(child: Container()),
                                 ],
                               ),
@@ -183,41 +221,7 @@ class _AccountsWidgetsState extends State<AccountsWidgets>
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   AccountsShortCard(child: Container()),
-                                  SizedBox(height: 35),
-                                  AccountsShortCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      Wrap(
-                        alignment: WrapAlignment.center,
-                        direction: Axis.horizontal,
-                        textDirection: TextDirection.ltr,
-                        runSpacing: 20,
-                        spacing: 20,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  AccountsShortCard(child: Container()),
-                                  SizedBox(height: 35),
+                                  SizedBox(height: 25),
                                   AccountsShortCard(child: Container()),
                                 ],
                               ),

@@ -13,7 +13,7 @@ final ThemeData oblioTheme = ThemeData(
   dividerColor: CompanyColors.font_secondary[10],
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
-  // hoverColor: Colors.grey[100],
+  // hoverColor: Colors.transparent,
   selectedRowColor: CompanyColors.font_secondary[87],
   unselectedWidgetColor: CompanyColors.font_secondary[87],
   disabledColor: CompanyColors.font_secondary[87],

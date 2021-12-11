@@ -8,13 +8,16 @@ class AccountHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-      OrgDetails(), 
-      SizedBox(width: 20),
-      StatDetails()],
+    return Padding(
+      padding: EdgeInsets.only(right: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+        OrgDetails(), 
+        SizedBox(width: 20),
+        StatDetails()],
+      ),
     );
   }
 }

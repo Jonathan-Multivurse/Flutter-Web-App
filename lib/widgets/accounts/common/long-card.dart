@@ -9,7 +9,7 @@ class AccountsLongCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntrinsicHeight(
       child: Container(
-        height: 740,
+        height: 730,
         width: 350,
         decoration: BoxDecoration(
           color: oblioTheme.cardColor,

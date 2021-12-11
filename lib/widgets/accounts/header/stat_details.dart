@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widget-models/divider_model.dart';
-import 'package:oblio/widgets/accounts/common/common_title.dart';
 import 'package:oblio/widgets/accounts/header/stats_tile.dart';
 import 'package:oblio/widgets/accounts/stats/stats.dart';
 
@@ -17,14 +15,17 @@ class StatDetails extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AccountCommonTitle(
-            title: 'Your Stats'.toUpperCase(),
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-              fontFamily: "Poppins",
-              fontWeight: FontWeight.w500,
-              fontStyle: FontStyle.normal,
+          Padding(
+            padding: const EdgeInsets.only(top: 15, left: 15),
+            child: Text(
+              'Your Stats'.toUpperCase(),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 13,
+                fontFamily: "Poppins",
+                fontWeight: FontWeight.w500,
+                fontStyle: FontStyle.normal,
+              ),
             ),
           ),
           AccountStatsTile(),
