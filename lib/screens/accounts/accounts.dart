@@ -11,16 +11,13 @@ class AccountsScreen extends StatefulWidget {
 class _AccountsScreenState extends State<AccountsScreen> {
   @override
   Widget build(BuildContext context) {
-    return ScrollConfiguration(
-      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-      child: Flexible(
-        flex: 1,
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.only(left: 10, right: 10, top: 30, bottom: 30),
-            child: AccountsWidgets(),
-          ),
-        ),
+    return Flexible(
+      flex: 1,
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ScrollConfiguration(
+          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+          child: SingleChildScrollView(child: AccountsWidgets())),
       ),
     );
   }

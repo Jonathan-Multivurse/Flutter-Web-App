@@ -141,6 +141,13 @@ final ThemeData oblioTheme = ThemeData(
       fontWeight: FontWeight.w500,
       fontStyle: FontStyle.normal,
     ),
+    subtitle2: TextStyle(
+      color: CompanyColors.font_primary[60],
+      fontSize: 11,
+      fontFamily: "Poppins",
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
     caption: TextStyle(
       color: CompanyColors.font_primary[60],
       fontSize: 11,

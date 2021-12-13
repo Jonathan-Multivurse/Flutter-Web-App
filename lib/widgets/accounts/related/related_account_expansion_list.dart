@@ -26,7 +26,7 @@ class RelatedAccountExpansionList extends StatelessWidget {
             ? context.read<AccRelatedContactsCubit>().show()
             : context.read<AccRelatedContactsCubit>().hide();
         title() => ownedState == false ? 'Expand' : 'Collapse';
-        expansion() => ownedState == false ? 300.0 : 500.0;
+        expansion() => ownedState == false ? 300.0 : 400.0;
         return Column(
           children: [
             Container(

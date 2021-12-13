@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/avatar_expansion_tile.dart';
+import 'package:oblio/widget-models/activity_avatar_expansion_tile.dart';
 import 'package:oblio/widgets/accounts/common/common_avatar.dart';
 
-class RelatedAccountExpansion extends StatelessWidget {
+class ContactActivityExpansion extends StatelessWidget {
   final Widget tags;
   final Widget title;
   final String image;
   final String type;
-  final Widget hearts;
+  final Widget tags2;
   final List<Widget> children;
-  const RelatedAccountExpansion(
+  const ContactActivityExpansion(
       {Key? key,
       required this.tags,
       required this.title,
       required this.image,
       required this.type,
-      required this.hearts,
+      required this.tags2,
       required this.children})
       : super(key: key);
 
@@ -30,7 +30,7 @@ class RelatedAccountExpansion extends StatelessWidget {
           padding: const EdgeInsets.only(left: 16),
           child: Text(type, style: oblioTheme.textTheme.overline),
         ),
-        AvatarExpansionTileModel(
+        ActivityAvatarExpansionTileModel(
           title: Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -44,7 +44,7 @@ class RelatedAccountExpansion extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [title, tags, hearts],
+                  children: [tags, title, tags2],
                 ),
               ],
             ),

@@ -5,6 +5,8 @@ import 'package:oblio/routes/routes.dart';
 import 'package:oblio/state/account-opp/account_opp.dart';
 import 'package:oblio/state/account-related-contacts/acc-related-contacts.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
+import 'package:oblio/state/contact-activity/contact_activity.dart';
+import 'package:oblio/state/contact-attribution/contact_attribution.dart';
 import 'package:oblio/state/left-menu/left_menu_cubit.dart';
 import 'package:oblio/state/owned-opp/owned_opp.dart';
 import 'package:oblio/state/password/password_cubit.dart';
@@ -58,6 +60,12 @@ void main() {
       ),
       BlocProvider<AccountOppCubit>(
         create: (BuildContext context) => AccountOppCubit(),
+      ),
+      BlocProvider<ContactActivityCubit>(
+        create: (BuildContext context) => ContactActivityCubit(),
+      ),
+      BlocProvider<ContactAttributionCubit>(
+        create: (BuildContext context) => ContactAttributionCubit(),
       ),
     ],
     child: MaterialApp(

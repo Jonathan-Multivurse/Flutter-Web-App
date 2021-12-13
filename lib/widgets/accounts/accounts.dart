@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
+import 'package:oblio/widgets/accounts/attribution/contact_attribution_widgets.dart';
 import 'package:oblio/widgets/accounts/common/long-card.dart';
 import 'package:oblio/widgets/accounts/common/short-card.dart';
+import 'package:oblio/widgets/accounts/contact-activity/contact_activity_widgets.dart';
 import 'package:oblio/widgets/accounts/header/header.dart';
 import 'package:oblio/widgets/accounts/opps/account_opp_widgets.dart';
 import 'package:oblio/widgets/accounts/related/related_contacts_widgets.dart';
@@ -32,219 +34,93 @@ class _AccountsWidgetsState extends State<AccountsWidgets>
       builder: (context, menuState) {
         var device = MediaQuery.of(context).size;
         var width = device.width;
-        visibility() => width < 600 && menuState != '' ? false : true;
-        return Visibility(
-          visible: visibility(),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10),
-            child: Wrap(
-              alignment: WrapAlignment.start,
-              runAlignment: WrapAlignment.start,
-              crossAxisAlignment: WrapCrossAlignment.start,
-              direction: Axis.horizontal,
-              textDirection: TextDirection.ltr,
-              runSpacing: 20,
-              spacing: 20,
-              children: [
-                Stack(
-                  children: [
-                    AccountHeader(),
-                    Positioned(
-                      bottom: 0,
-                      child: Container(
-                        margin: EdgeInsets.only(left: 20),
-                        width: 450,
-                        color: oblioTheme.canvasColor,
-                        child: TabBar(
-                          controller: _tabController,
-                          tabs: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                'Overview'.toUpperCase(),
-                                style: oblioTheme.textTheme.overline!,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                'Details'.toUpperCase(),
-                                style: oblioTheme.textTheme.overline!,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                'Activity'.toUpperCase(),
-                                style: oblioTheme.textTheme.overline!,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                'Versions'.toUpperCase(),
-                                style: oblioTheme.textTheme.overline!,
-                              ),
-                            ),
-                          ],
-                          indicator: UnderlineTabIndicator(
-                            borderSide: BorderSide(
-                                color: HexColor('#5F78E4'), width: 2.0),
-                          ),
+
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(children: [
+              AccountHeader(),
+              Positioned(
+                bottom: 2,
+                child: Container(
+                  color: oblioTheme.canvasColor,
+                  height: 50,
+                  width: 450,
+                  child: TabBar(
+                    controller: _tabController,
+                    tabs: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Overview'.toUpperCase(),
+                          style: oblioTheme.textTheme.overline!,
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Container(
-                  height: 1250,
-                  padding: EdgeInsets.only(left: 10, right: 10),
-                  child: TabBarView(
-                    controller: _tabController,
-                    children: <Widget>[
-                      Wrap(
-                        alignment: WrapAlignment.start,
-                        direction: Axis.horizontal,
-                        textDirection: TextDirection.ltr,
-                        runSpacing: 20,
-                        spacing: 20,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  AccountsShortCard(
-                                      child: RelatedContactsWidets()),
-                                  SizedBox(height: 25),
-                                  AccountsShortCard(child: AccountOppWidets()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Details'.toUpperCase(),
+                          style: oblioTheme.textTheme.overline!,
+                        ),
                       ),
-                      Wrap(
-                        alignment: WrapAlignment.center,
-                        direction: Axis.horizontal,
-                        textDirection: TextDirection.ltr,
-                        runSpacing: 20,
-                        spacing: 20,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  AccountsShortCard(child: Container()),
-                                  SizedBox(height: 25),
-                                  AccountsShortCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Activity'.toUpperCase(),
+                          style: oblioTheme.textTheme.overline!,
+                        ),
                       ),
-                      Wrap(
-                        alignment: WrapAlignment.center,
-                        direction: Axis.horizontal,
-                        textDirection: TextDirection.ltr,
-                        runSpacing: 20,
-                        spacing: 20,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  AccountsShortCard(child: Container()),
-                                  SizedBox(height: 25),
-                                  AccountsShortCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      Wrap(
-                        alignment: WrapAlignment.center,
-                        direction: Axis.horizontal,
-                        textDirection: TextDirection.ltr,
-                        runSpacing: 20,
-                        spacing: 20,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  AccountsShortCard(child: Container()),
-                                  SizedBox(height: 25),
-                                  AccountsShortCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  AccountsLongCard(child: Container()),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Versions'.toUpperCase(),
+                          style: oblioTheme.textTheme.overline!,
+                        ),
                       ),
                     ],
+                    indicator: UnderlineTabIndicator(
+                      borderSide:
+                          BorderSide(color: HexColor('#5F78E4'), width: 2.0),
+                    ),
                   ),
                 ),
-              ],
+              ),
+            ]),
+            Container(
+              padding: EdgeInsets.only(left: 10, right: 10, top: 25),
+              height: 1000,
+              child: TabBarView(
+                controller: _tabController,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          AccountsShortCard(child: RelatedContactsWidets()),
+                          SizedBox(height: 25),
+                          AccountsShortCard(child: AccountOppWidets()),
+                        ],
+                      ),
+                      AccountsLongCard(child: ContactActivityWidets()),
+                      AccountsLongCard(child: ContactAttributionWidgets()),
+                    ],
+                  ),
+                  Center(
+                    child: Text('Details Tab'),
+                  ),
+                  Center(
+                    child: Text('Activity Tab'),
+                  ),
+                  Center(
+                    child: Text('Overview Tab'),
+                  ),
+                ],
+              ),
             ),
-          ),
+          ],
         );
       },
     );

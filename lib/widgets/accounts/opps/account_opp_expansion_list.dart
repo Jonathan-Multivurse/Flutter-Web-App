@@ -26,7 +26,7 @@ class AccountOppExpansionList extends StatelessWidget {
           ? context.read<AccountOppCubit>().show()
           : context.read<AccountOppCubit>().hide();
       title() => ownedState == false ? 'Expand' : 'Collapse';
-      expansion() => ownedState == false ? 300.0 : 500.0;
+      expansion() => ownedState == false ? 200.0 : 300.0;
 
       return Column(
         children: [
