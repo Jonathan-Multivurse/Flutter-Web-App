@@ -10,6 +10,8 @@ import 'package:oblio/widgets/accounts/contact-activity/contact_activity_widgets
 import 'package:oblio/widgets/accounts/header/header.dart';
 import 'package:oblio/widgets/accounts/opps/account_opp_widgets.dart';
 import 'package:oblio/widgets/accounts/related/related_contacts_widgets.dart';
+import 'package:oblio/widgets/accounts/tab-details/tab_details.dart';
+import 'package:oblio/widgets/accounts/tab-overview/tab_overview.dart';
 
 class AccountsWidgets extends StatefulWidget {
   const AccountsWidgets({Key? key}) : super(key: key);
@@ -92,25 +94,8 @@ class _AccountsWidgetsState extends State<AccountsWidgets>
               child: TabBarView(
                 controller: _tabController,
                 children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          AccountsShortCard(child: RelatedContactsWidets()),
-                          SizedBox(height: 25),
-                          AccountsShortCard(child: AccountOppWidets()),
-                        ],
-                      ),
-                      AccountsLongCard(child: ContactActivityWidets()),
-                      AccountsLongCard(child: ContactAttributionWidgets()),
-                    ],
-                  ),
-                  Center(
-                    child: Text('Details Tab'),
-                  ),
+                  AccountTabOverview(),
+                  AccountTabDetails(),
                   Center(
                     child: Text('Activity Tab'),
                   ),
