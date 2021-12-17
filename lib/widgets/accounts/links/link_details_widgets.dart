@@ -17,7 +17,7 @@ class _LinksWidetsState extends State<LinksWidets> {
   Widget build(BuildContext context) {
     return IntrinsicHeight(
       child: Container(
-        height: 600,
+        height: 800,
         child: ListView(
           shrinkWrap: true,
           children: [

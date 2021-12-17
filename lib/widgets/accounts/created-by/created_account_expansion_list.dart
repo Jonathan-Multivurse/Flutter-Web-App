@@ -9,7 +9,7 @@ class CreatedByExpansionList extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 300,
+          height: 500,
           child: ListView(
             shrinkWrap: true,
             children: [

@@ -90,7 +90,7 @@ class _AccountsWidgetsState extends State<AccountsWidgets>
             ]),
             Container(
               padding: EdgeInsets.only(left: 10, right: 10, top: 25),
-              height: 1000,
+              height: 1175,
               child: TabBarView(
                 controller: _tabController,
                 children: <Widget>[
