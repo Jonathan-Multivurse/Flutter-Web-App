@@ -40,7 +40,7 @@ class DirectoryLinks extends StatelessWidget {
               DetailsTile(
                 icon: AccountSocialLinks(
                     icon: MdiIcons.facebook,
-                    background: HexColor('#2DAAE1'),
+                    background: HexColor('#1877F2'),
                     color: Colors.white),
                 title: 'Blog',
                 content: 'facebook.com/timothy',
@@ -55,7 +55,7 @@ class DirectoryLinks extends StatelessWidget {
               DetailsTile(
                 icon: AccountSocialLinks(
                     icon: MdiIcons.twitter,
-                    background: HexColor('#1877F2'),
+                    background: HexColor('#2DAAE1'),
                     color: Colors.white),
                 title: 'Contact Page',
                 content: 'twitter.com/timothy',
