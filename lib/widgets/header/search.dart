@@ -27,9 +27,9 @@ class SearchInput extends StatelessWidget {
       } else if (width > 1400) {
         return width * 0.50;
       } else if (width <= 750) {
-        return width * 0.55;
-      } else {
-        return width * 0.55;
+        return width * 0.4;
+      } else if (width <= 450) {
+        return width * 0.4;
       }
     }
 
@@ -37,7 +37,7 @@ class SearchInput extends StatelessWidget {
       padding: EdgeInsets.all(10),
       child: SearchInputModel(
         height: 45,
-        width: dynamicWidth(),
+        width: dynamicWidth()!,
         padding: EdgeInsets.all(10),
         style: oblioTheme.inputDecorationTheme.labelStyle!,
         cursorColor: oblioTheme.textSelectionTheme.cursorColor!,

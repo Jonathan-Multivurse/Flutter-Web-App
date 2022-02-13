@@ -18,7 +18,7 @@ class HomeHeader extends StatelessWidget {
     var width = device.width;
     logoVisibility() => width > 900 ? true : false;
     buttonVisibility() => width > 750 ? true : false;
-    leading() => width < 900 ? 100.0 : 250.0;
+    leading() => width < 900 ? 70.0 : 250.0;
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -34,7 +34,7 @@ class HomeHeader extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Padding(
-                padding: const EdgeInsets.only(left: 25),
+                padding: EdgeInsets.only(left: 25),
                 child: MenuButton(onPressed: () {
                   Scaffold.of(context).openDrawer();
                 })),
