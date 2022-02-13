@@ -48,7 +48,7 @@ class Routes {
           child: AuthenticationScreen(),
           type: PageTransitionType.fade,
           settings: settings,
-          duration: const Duration(milliseconds: 50),
+          duration: const Duration(milliseconds: 100),
         );
       case ResetpasswordRoute:
         return PageTransition(
