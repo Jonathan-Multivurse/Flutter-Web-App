@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/activity_avatar_expansion_tile.dart';
+import 'package:oblio/components/activity_avatar_expansion_tile.dart';
 import 'package:oblio/widgets/accounts/common/common_avatar.dart';
 
 class ContactActivityExpansion extends StatelessWidget {

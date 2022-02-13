@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/pipeline-drawer/pipeline_drawer.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/percentage_expansion_tile.dart';
+import 'package:oblio/components/percentage_expansion_tile.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class PipelineExpansion extends StatelessWidget {
@@ -32,7 +32,7 @@ class PipelineExpansion extends StatelessWidget {
           visible: visibility(),
           child: PercentageExpansionTileModel(
             title: Container(
-              margin: EdgeInsets.only(top:5),
+              margin: EdgeInsets.only(top: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,

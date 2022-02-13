@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/widget-models/circular_frame_model.dart';
+import 'package:oblio/components/circular_frame_model.dart';
 
 class StatsNumData extends StatelessWidget {
   const StatsNumData({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/details_tile.dart';
+import 'package:oblio/components/details_tile.dart';
 import 'package:oblio/widgets/accounts/header/social_links.dart';
 
 class SiteLinks extends StatelessWidget {

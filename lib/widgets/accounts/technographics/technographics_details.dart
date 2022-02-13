@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widget-models/details_tile.dart';
+import 'package:oblio/components/details_tile.dart';
 
 class TechnographicsDetails extends StatelessWidget {
   const TechnographicsDetails({Key? key}) : super(key: key);

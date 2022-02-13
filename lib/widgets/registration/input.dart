@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/input_model.dart';
+import 'package:oblio/components/input_model.dart';
 
 class RegistrationInput extends StatelessWidget {
   final bool obscure;

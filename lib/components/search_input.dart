@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 
 class SearchInputModel extends StatelessWidget {
+  final double height;
   final double width;
   final TextStyle style;
   final Color cursorColor;
@@ -15,6 +16,7 @@ class SearchInputModel extends StatelessWidget {
 
   SearchInputModel({
     Key? key,
+    required this.height,
     required this.width,
     required this.style,
     required this.cursorColor,
@@ -30,6 +32,7 @@ class SearchInputModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+        height: height,
         width: width,
         child: Material(
           color: Colors.transparent,
@@ -38,6 +41,7 @@ class SearchInputModel extends StatelessWidget {
             style: style,
             cursorColor: cursorColor,
             decoration: InputDecoration(
+              floatingLabelBehavior: FloatingLabelBehavior.never,
               isDense: false,
               hoverColor: Colors.transparent,
               prefixIcon: prefixIcon,
@@ -46,27 +50,19 @@ class SearchInputModel extends StatelessWidget {
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: BorderSide(
-                      color: Colors.grey[300]!,
-                      width: 1,
-                      style: BorderStyle.solid)),
+                      color: Colors.white, width: 1, style: BorderStyle.solid)),
               errorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: BorderSide(
-                      color: Colors.grey[300]!,
-                      width: 1,
-                      style: BorderStyle.solid)),
+                      color: Colors.white, width: 1, style: BorderStyle.solid)),
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: BorderSide(
-                      color: Colors.grey[300]!,
-                      width: 1,
-                      style: BorderStyle.solid)),
+                      color: Colors.white, width: 1, style: BorderStyle.solid)),
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: BorderSide(
-                      color: Colors.grey[300]!,
-                      width: 1,
-                      style: BorderStyle.solid)),
+                      color: Colors.white, width: 1, style: BorderStyle.solid)),
               contentPadding: padding,
               label: Text(label),
               labelStyle: labelStyle,

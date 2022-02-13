@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widget-models/details_tile.dart';
+import 'package:oblio/components/details_tile.dart';
 
 class FirmographicsDetails extends StatelessWidget {
   const FirmographicsDetails({Key? key}) : super(key: key);
@@ -7,7 +7,7 @@ class FirmographicsDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 10, top: 20, right: 20 , bottom: 20),
+      padding: EdgeInsets.only(left: 10, top: 20, right: 20, bottom: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

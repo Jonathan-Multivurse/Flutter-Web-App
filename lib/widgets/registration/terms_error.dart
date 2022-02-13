@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widget-models/alert_model.dart';
+import 'package:oblio/components/alert_model.dart';
 
 class TermsError extends StatelessWidget {
   const TermsError({Key? key}) : super(key: key);

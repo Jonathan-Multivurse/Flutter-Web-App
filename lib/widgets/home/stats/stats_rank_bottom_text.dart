@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/text_model.dart';
 
 class RankBottomText extends StatelessWidget {
   const RankBottomText({Key? key}) : super(key: key);

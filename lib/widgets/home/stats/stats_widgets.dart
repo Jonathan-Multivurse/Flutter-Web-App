@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/divider_model.dart';
+import 'package:oblio/components/divider_model.dart';
 import 'package:oblio/widgets/home/common/common_title.dart';
 import 'package:oblio/widgets/home/stats/stats_profile_details.dart';
 import 'package:oblio/widgets/home/stats/stats_ranks.dart';

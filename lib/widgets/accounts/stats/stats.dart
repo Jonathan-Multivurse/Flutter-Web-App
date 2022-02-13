@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/widget-models/card_model.dart';
+import 'package:oblio/components/card_model.dart';
 
 class AccountStats extends StatelessWidget {
   final Widget child;

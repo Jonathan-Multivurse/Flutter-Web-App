@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/large_number_model.dart';
+import 'package:oblio/components/large_number_model.dart';
 
 class TaskNumber extends StatelessWidget {
   const TaskNumber({Key? key}) : super(key: key);

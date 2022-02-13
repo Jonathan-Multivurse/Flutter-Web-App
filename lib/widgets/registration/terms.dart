@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/terms/terms_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/text_model.dart';
 import 'package:oblio/widgets/authentication/checkbox.dart';
 
 class Terms extends StatelessWidget {

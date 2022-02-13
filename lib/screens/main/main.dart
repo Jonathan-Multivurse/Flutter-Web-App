@@ -58,6 +58,14 @@ class MainScreen extends StatelessWidget {
           onWillPop: () async => false,
           child: Scaffold(
             backgroundColor: oblioTheme.canvasColor,
+            drawerScrimColor: Colors.transparent,
+            drawer: Drawer(
+                backgroundColor: Colors.grey.withOpacity(0.1),
+                elevation: 0,
+                child: Container(
+                  padding: EdgeInsets.only(right: 50),
+                  child: LeftMenu(),
+                )),
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(60),
               child: HomeHeader(),
@@ -66,8 +74,7 @@ class MainScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                LeftMenu(),
-                Container(child: screens()),
+                Container(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [RightMenu(), RightWindow()],

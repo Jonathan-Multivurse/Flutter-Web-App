@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/avatar_expansion_tile.dart';
+import 'package:oblio/components/avatar_expansion_tile.dart';
 import 'package:oblio/widgets/accounts/common/common_avatar.dart';
 
 class RelatedAccountExpansion extends StatelessWidget {

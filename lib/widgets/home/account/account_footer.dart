@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/text_model.dart';
 
 class AccountFooter extends StatelessWidget {
   const AccountFooter({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class AccountFooter extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: TextModel(
                 data: 'Privacy Policy'.toUpperCase(),
                 style: oblioTheme.textTheme.caption!,
@@ -24,7 +24,7 @@ class AccountFooter extends StatelessWidget {
             ),
             SizedBox(width: 10),
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: TextModel(
                 data: 'Terms of Service'.toUpperCase(),
                 style: oblioTheme.textTheme.caption!,

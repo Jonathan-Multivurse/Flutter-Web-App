@@ -24,10 +24,11 @@ class HeaderAvatar extends StatelessWidget {
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       child: Container(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.symmetric(vertical: 5),
+        margin: EdgeInsets.only(right: 16),
         child: CircleAvatar(
           backgroundColor: oblioTheme.backgroundColor,
-          radius: 35,
+          radius: 20,
           backgroundImage: AssetImage(
             'lib/assets/images/1.0x/avatar0.png',
           ),

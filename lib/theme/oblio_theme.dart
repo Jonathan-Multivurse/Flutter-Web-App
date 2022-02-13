@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import './colors.dart';
+import 'package:oblio/theme/colors.dart';
 
 final ThemeData oblioTheme = ThemeData(
   brightness: Brightness.light,
   primaryColor: CompanyColors.red[500],
   primaryColorLight: CompanyColors.primary[500],
   primaryColorDark: CompanyColors.font_primary[500],
-  canvasColor: CompanyColors.primary[500],
+  canvasColor: Colors.white,
   scaffoldBackgroundColor: CompanyColors.secondary[500],
   bottomAppBarColor: CompanyColors.font_secondary[100],
   cardColor: CompanyColors.primary[50],
   dividerColor: CompanyColors.font_secondary[10],
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
-  // hoverColor: Colors.transparent,
+  // hoverColor: CompanyColors.transparent,
   selectedRowColor: CompanyColors.font_secondary[87],
   unselectedWidgetColor: CompanyColors.font_secondary[87],
   disabledColor: CompanyColors.font_secondary[87],
@@ -25,14 +25,14 @@ final ThemeData oblioTheme = ThemeData(
   hintColor: CompanyColors.font_secondary[87],
   errorColor: CompanyColors.font_secondary[87],
   textSelectionTheme: TextSelectionThemeData(
-    cursorColor: CompanyColors.red[500],
+    cursorColor: Colors.grey[800],
   ),
 
   // Button Theme
   textButtonTheme: TextButtonThemeData(
     style: ButtonStyle(
-        overlayColor: MaterialStateProperty.resolveWith(
-            (states) => CompanyColors.primary[50]),
+        overlayColor:
+            MaterialStateProperty.resolveWith((states) => CompanyColors.primary[50]),
         textStyle: MaterialStateProperty.all(
           TextStyle(
             fontSize: 14,
@@ -47,8 +47,8 @@ final ThemeData oblioTheme = ThemeData(
               width: 1,
               style: BorderStyle.solid),
         ),
-        backgroundColor: MaterialStateProperty.resolveWith(
-            (states) => CompanyColors.primary[50]),
+        backgroundColor:
+            MaterialStateProperty.resolveWith((states) => CompanyColors.primary[50]),
         splashFactory: NoSplash.splashFactory),
   ),
 
@@ -64,8 +64,8 @@ final ThemeData oblioTheme = ThemeData(
             color: CompanyColors.font_primary[100],
           ),
         ),
-        backgroundColor: MaterialStateProperty.resolveWith(
-            (states) => CompanyColors.red[500]),
+        backgroundColor:
+            MaterialStateProperty.resolveWith((states) => CompanyColors.red[500]),
         splashFactory: NoSplash.splashFactory),
   ),
   //button theme
@@ -84,8 +84,8 @@ final ThemeData oblioTheme = ThemeData(
             RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
         )),
-        backgroundColor: MaterialStateProperty.resolveWith(
-            (states) => CompanyColors.red[500]),
+        backgroundColor:
+            MaterialStateProperty.resolveWith((states) => CompanyColors.red[500]),
         splashFactory: NoSplash.splashFactory),
   ),
   // Fab Button Theme
@@ -250,9 +250,9 @@ final ThemeData oblioTheme = ThemeData(
   //input theme
   inputDecorationTheme: InputDecorationTheme(
     labelStyle: TextStyle(
-        color: CompanyColors.font_primary[60],
+        color: Colors.grey[800],
         fontSize: 14,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w400,
         fontStyle: FontStyle.normal,
         fontFamily: "Poppins"),
     filled: true,
@@ -284,9 +284,7 @@ final ThemeData oblioTheme = ThemeData(
     errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5),
         borderSide: BorderSide(
-            color: CompanyColors.red[500]!,
-            width: 1,
-            style: BorderStyle.solid)),
+            color: CompanyColors.red[500]!, width: 1, style: BorderStyle.solid)),
     contentPadding: EdgeInsets.all(10),
     errorStyle: TextStyle(
         backgroundColor: CompanyColors.secondary[50],
@@ -299,8 +297,7 @@ final ThemeData oblioTheme = ThemeData(
   // checkbox theme
 
   checkboxTheme: CheckboxThemeData(
-      fillColor:
-          MaterialStateColor.resolveWith((states) => CompanyColors.red[500]!),
+      fillColor: MaterialStateColor.resolveWith((states) => CompanyColors.red[500]!),
       side: BorderSide(
           color: CompanyColors.red[500]!, width: 1, style: BorderStyle.solid)),
 

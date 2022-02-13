@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/checkbox_model.dart';
+import 'package:oblio/components/checkbox_model.dart';
 
 class AuthenticationCheckbox extends StatelessWidget {
   final bool value;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/secondary_button_model.dart';
+import 'package:oblio/components/secondary_button_model.dart';
 
 class PreviousButton extends StatelessWidget {
   final void Function()? onPressed;

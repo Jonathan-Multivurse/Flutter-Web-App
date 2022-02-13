@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/state/right-window/right_window_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/text_model.dart';
 
 class RightWindow extends StatelessWidget {
   const RightWindow({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class RightWindow extends StatelessWidget {
             return Visibility(
               visible: windowState,
               child: Container(
-                width: 300,
+                width: 400,
                 color: Colors.grey[50],
                 alignment: Alignment.center,
                 child: Column(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/circular_frame_model.dart';
-import 'package:oblio/widget-models/icon_expansion_tile.dart';
+import 'package:oblio/components/circular_frame_model.dart';
+import 'package:oblio/components/icon_expansion_tile.dart';
 
 class AccountStatsTile extends StatelessWidget {
   const AccountStatsTile({Key? key}) : super(key: key);

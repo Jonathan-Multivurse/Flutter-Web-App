@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/text_model.dart';
 import 'package:oblio/widgets/home/performers/performers_avatar.dart';
 import 'package:oblio/widgets/home/performers/performers_num_data.dart';
 
@@ -17,8 +17,8 @@ class PerformersDetails extends StatelessWidget {
     required this.number,
     required this.image,
     required this.title,
-     required this.title2,
-      required this.title3,
+    required this.title2,
+    required this.title3,
     required this.name,
     required this.numdata,
   }) : super(key: key);

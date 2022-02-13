@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
 import 'package:oblio/state/right-window/right_window_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/fab_button_model.dart';
+import 'package:oblio/components/fab_button_model.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class RightMenu extends StatefulWidget {
@@ -57,7 +57,7 @@ class _RightMenuState extends State<RightMenu> {
     return BlocBuilder<RightMenuCubit, String>(
       builder: (context, menuState) {
         return Material(
-          elevation: 4,
+          elevation: 0,
           color: Colors.white,
           child: Container(
             width: 75,
@@ -67,7 +67,7 @@ class _RightMenuState extends State<RightMenu> {
               itemBuilder: (context, index) {
                 hover() {
                   if (menuState == '') {
-                    return Colors.grey[100];
+                    return Colors.grey[200];
                   } else if (menuState == 'calendar' && index == 0) {
                     return colorItems[0];
                   } else if (menuState == 'task' && index == 1) {
@@ -87,38 +87,17 @@ class _RightMenuState extends State<RightMenu> {
                   }
                 }
 
-                elevation() {
-                  if (menuState == '') {
-                    return 3.0;
-                  } else if (menuState == 'calendar' && index == 0) {
-                    return 0.0;
-                  } else if (menuState == 'task' && index == 1) {
-                    return 0.0;
-                  } else if (menuState == 'image' && index == 2) {
-                    return 0.0;
-                  } else if (menuState == 'account' && index == 3) {
-                    return 0.0;
-                  } else if (menuState == 'cart' && index == 4) {
-                    return 0.0;
-                  } else if (menuState == 'email' && index == 5) {
-                    return 0.0;
-                  } else if (menuState == 'phone' && index == 6) {
-                    return 0.0;
-                  } else {
-                    return 3.0;
-                  }
-                }
 
                 return Container(
                     padding: EdgeInsets.all(10),
                     child: FabButtonModel(
                       tag: tagItems[index],
                       hover: hover()!,
-                      elevation: elevation(),
+                      elevation: 0,
                       hoverElevation: 0.0,
                       mini: true,
                       background: menuState == ''
-                          ? oblioTheme.backgroundColor
+                          ? Colors.grey[50]!
                           : menuState == 'calendar' && index == 0
                               ? colorItems[0]
                               : menuState == 'task' && index == 1

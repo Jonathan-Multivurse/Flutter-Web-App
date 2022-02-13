@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/widget-models/percentage_expansion_tile.dart';
+import 'package:oblio/components/percentage_expansion_tile.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class OwnedOppExpansion extends StatelessWidget {
@@ -49,12 +49,7 @@ class OwnedOppExpansion extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                tags,
-                title,
-                subtitle,
-                hearts
-              ],
+              children: [tags, title, subtitle, hearts],
             ),
           ],
         ),

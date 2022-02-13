@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/text_model.dart';
 import 'package:oblio/widgets/home/stats/stats_task_bottom_text.dart';
 import 'package:oblio/widgets/home/stats/stats_task_icon.dart';
 import 'package:oblio/widgets/home/stats/stats_task_number.dart';

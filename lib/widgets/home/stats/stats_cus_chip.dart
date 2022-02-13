@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/chip_model.dart';
+import 'package:oblio/components/chip_model.dart';
 
 class StatsCusChip extends StatelessWidget {
   const StatsCusChip({Key? key}) : super(key: key);

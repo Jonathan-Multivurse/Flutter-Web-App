@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widget-models/details_tile.dart';
+import 'package:oblio/components/details_tile.dart';
 
 class ContactDetails extends StatelessWidget {
   const ContactDetails({Key? key}) : super(key: key);

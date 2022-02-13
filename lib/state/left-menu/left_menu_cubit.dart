@@ -1,18 +1,13 @@
 import 'package:bloc/bloc.dart';
 
 class LeftMenuCubit extends Cubit<String> {
-  LeftMenuCubit() : super('home');
-  void home() => emit('home');
-  void dashboard() => emit('dashboard');
-  void calendar() => emit('calendar');
-  void todos() => emit('todos');
-  void teams() => emit('teams');
-  void opportunities() => emit('opportunities');
-  void accounts() => emit('accounts');
-  void contacts() => emit('contacts');
-  void campaings() => emit('campaigns');
-  void creatives() => emit('creatives');
-  void workflows() => emit('workflows');
-  void products() => emit('products');
-  void employees() => emit('employees');
+  LeftMenuCubit() : super('lobby');
+  void lobby() => emit('lobby');
+  void placeholder1() => emit('placeholder1');
+  void placeholder2() => emit('placeholder2');
+  void placeholder3() => emit('placeholder3');
+  void placeholder4() => emit('placeholder4');
+  void placeholder5() => emit('placeholder5');
+  void placeholder6() => emit('placeholder6');
+  void placeholder7() => emit('placeholder7');
 }

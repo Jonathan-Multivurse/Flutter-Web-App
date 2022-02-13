@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/primary_button_model.dart';
+import 'package:oblio/components/primary_button_model.dart';
 
 class CompleteSignupButton extends StatelessWidget {
   final void Function()? onPressed;
-  const CompleteSignupButton({Key? key, required this.onPressed}) : super(key: key);
+  const CompleteSignupButton({Key? key, required this.onPressed})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

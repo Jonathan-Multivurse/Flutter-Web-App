@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/large_number_model.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/large_number_model.dart';
+import 'package:oblio/components/text_model.dart';
 
 class ScheduledNumbers extends StatelessWidget {
   const ScheduledNumbers({Key? key}) : super(key: key);

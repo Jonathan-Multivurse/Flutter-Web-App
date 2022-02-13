@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:oblio/widget-models/divider_model.dart';
+import 'package:oblio/components/divider_model.dart';
 import 'package:oblio/widgets/accounts/header/stats_tile.dart';
 import 'package:oblio/widgets/accounts/stats/stats.dart';
 

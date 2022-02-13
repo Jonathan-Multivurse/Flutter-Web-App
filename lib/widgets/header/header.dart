@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/widgets/header/header_avatar.dart';
-import 'package:oblio/widgets/left-menu/collapsed_left_menu.dart';
 import 'package:oblio/widgets/header/header_logo.dart';
-import 'package:oblio/widgets/header/header_publish_button.dart';
+import 'package:oblio/widgets/header/menu.dart';
+import 'package:oblio/widgets/header/notification.dart';
 import 'package:oblio/widgets/header/search.dart';
-import 'package:oblio/widgets/header/header_title.dart';
+import 'package:oblio/widgets/header/settings.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -15,75 +16,71 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     var device = MediaQuery.of(context).size;
     var width = device.width;
-    menuVisibility() => width < 900 ? true : false;
     logoVisibility() => width > 900 ? true : false;
-    titleVisibility() => width > 1350 ? true : false;
     buttonVisibility() => width > 750 ? true : false;
-    leading() => width < 500 ? 250.0 : 200.0;
-    return AppBar(
-      backgroundColor: Colors.white,
-      toolbarHeight: 60,
-      leadingWidth: leading(),
-      leading: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Visibility(
-            visible: menuVisibility(),
-            child: InkWell(
-              onTap: () {},
-              hoverColor: Colors.transparent,
-              splashColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              child: InkResponse(
-                onTap: () {
-                  showDialog(
-                      barrierColor: Colors.transparent,
-                      context: context,
-                      builder: (BuildContext context) {
-                        return Container(
-                            padding: EdgeInsets.only(top: 60, right: 15),
-                            alignment: Alignment.topLeft,
-                            child: CollapsedLeftMenu());
-                      });
-                },
-                hoverColor: Colors.transparent,
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
+    leading() => width < 900 ? 100.0 : 250.0;
+    return Container(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: const FractionalOffset(0.0, 0.0),
+              end: const FractionalOffset(0.8, 0.0),
+              stops: [0.0, 1.0],
+              colors: [HexColor('#3f5efb'), HexColor('#fc4646')])),
+      child: AppBar(
+        backgroundColor: Colors.amber.withOpacity(0.0),
+        toolbarHeight: 80,
+        leadingWidth: leading(),
+        leading: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: MenuButton(onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                })),
+            Visibility(
+              visible: logoVisibility(),
+              child: HomeLogo(),
+            ),
+          ],
+        ),
+        centerTitle: true,
+        elevation: 0,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SearchInput(
+              obscure: false,
+              label: 'search',
+              prefixIcon: Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10),
                 child: Icon(
-                  Icons.menu,
-                  color: Colors.grey[700],
-                  size: 30,
+                  Icons.search,
+                  color: Colors.grey[800],
                 ),
               ),
             ),
+          ],
+        ),
+        actions: [
+          Visibility(
+              visible: buttonVisibility(),
+              child: NotificationButton(onPressed: () {})),
+          Visibility(
+            visible: buttonVisibility(),
+            child: SizedBox(width: 20),
           ),
           Visibility(
-            visible: logoVisibility(),
-            child: HomeLogo(),
+              visible: buttonVisibility(),
+              child: SettingsButton(onPressed: () {})),
+          Visibility(
+            visible: buttonVisibility(),
+            child: SizedBox(width: 20),
           ),
+          HeaderAvatar(),
         ],
       ),
-      title: Visibility(
-        visible: titleVisibility(),
-        child: HomeHeaderTitle(),
-      ),
-      centerTitle: false,
-      elevation: 4,
-      actions: [
-        SearchInput(
-          obscure: false,
-          label: 'search',
-          prefixIcon: Icon(
-            Icons.search,
-            color: Colors.grey[600],
-          ),
-        ),
-        Visibility(
-          visible: buttonVisibility(),
-          child: PublishButton(onPressed: () {}),
-        ),
-        HeaderAvatar(),
-      ],
     );
   }
 }

@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/state/scheduled/scheduled_cubit.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/circular_frame_model.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/circular_frame_model.dart';
+import 'package:oblio/components/text_model.dart';
 import 'package:oblio/widgets/home/scheduled/scheduled_arc.dart';
 import 'package:oblio/widgets/home/scheduled/scheduled_numbers.dart';
 

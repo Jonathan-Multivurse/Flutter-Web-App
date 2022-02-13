@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
-import 'package:oblio/widget-models/tile_model.dart';
+import 'package:oblio/components/tile_model.dart';
 
 class CollapsedLeftMenu extends StatefulWidget {
   const CollapsedLeftMenu({Key? key}) : super(key: key);

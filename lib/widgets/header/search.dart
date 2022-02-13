@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 
-import 'package:oblio/widget-models/search_input.dart';
+import 'package:oblio/components/search_input.dart';
 
 class SearchInput extends StatelessWidget {
   final bool obscure;
@@ -21,26 +21,27 @@ class SearchInput extends StatelessWidget {
 
     dynamicWidth() {
       if (width > 750 && width < 1200) {
-        return width * 0.5;
+        return width * 0.40;
       } else if (width > 1200 && width < 1400) {
-        return width * 0.6;
-      }else if (width > 1400) {
-        return width * 0.5;
-      } else if (width > 500 && width < 900) {
-        return width * 0.65;
+        return width * 0.40;
+      } else if (width > 1400) {
+        return width * 0.50;
+      } else if (width <= 750) {
+        return width * 0.55;
       } else {
-        return width * 0.6;
+        return width * 0.55;
       }
     }
 
     return Padding(
       padding: EdgeInsets.all(10),
       child: SearchInputModel(
+        height: 45,
         width: dynamicWidth(),
         padding: EdgeInsets.all(10),
         style: oblioTheme.inputDecorationTheme.labelStyle!,
         cursorColor: oblioTheme.textSelectionTheme.cursorColor!,
-        fillColor: oblioTheme.inputDecorationTheme.fillColor!,
+        fillColor: Colors.white,
         label: label,
         prefixIcon: prefixIcon,
         validator: (String) {},

@@ -53,11 +53,11 @@ class RelatedAccountsTile extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.favorite, size: 18, color: CompanyColors.red[500]),
-                  Icon(Icons.favorite, size: 18, color: CompanyColors.red[500]),
-                  Icon(Icons.favorite, size: 18, color: CompanyColors.red[300]),
-                  Icon(Icons.favorite, size: 18, color: CompanyColors.red[100]),
-                  Icon(Icons.favorite, size: 18, color: CompanyColors.red[100]),
+                  Icon(Icons.favorite, size: 18, color: Colors.red[500]),
+                  Icon(Icons.favorite, size: 18, color: Colors.red[500]),
+                  Icon(Icons.favorite, size: 18, color: Colors.red[300]),
+                  Icon(Icons.favorite, size: 18, color: Colors.red[100]),
+                  Icon(Icons.favorite, size: 18, color: Colors.red[100]),
                 ],
               ),
               SizedBox(width: 15),

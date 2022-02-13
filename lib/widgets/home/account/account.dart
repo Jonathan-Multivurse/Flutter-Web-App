@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:oblio/routes/routes.dart';
 import 'package:oblio/theme/colors.dart';
 import 'package:oblio/theme/oblio_theme.dart';
-import 'package:oblio/widget-models/avatar_model.dart';
-import 'package:oblio/widget-models/divider_model.dart';
-import 'package:oblio/widget-models/primary_button_model.dart';
-import 'package:oblio/widget-models/text_model.dart';
+import 'package:oblio/components/avatar_model.dart';
+import 'package:oblio/components/divider_model.dart';
+import 'package:oblio/components/primary_button_model.dart';
+import 'package:oblio/components/text_model.dart';
 import 'package:oblio/widgets/home/account/account_footer.dart';
 
 class AccountCard extends StatelessWidget {
@@ -106,7 +106,7 @@ class AccountCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50.0),
                     )),
                     backgroundColor: MaterialStateProperty.resolveWith(
-                        (states) => CompanyColors.red[500]),
+                        (states) => Colors.red[500]),
                     splashFactory: NoSplash.splashFactory),
               ),
               Padding(

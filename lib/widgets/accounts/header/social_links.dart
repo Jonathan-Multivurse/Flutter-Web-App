@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/widget-models/circular_frame_model.dart';
+import 'package:oblio/components/circular_frame_model.dart';
 
 class AccountSocialLinks extends StatelessWidget {
   final IconData icon;
