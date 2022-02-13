@@ -140,7 +140,7 @@ class _AuthenticationCardState extends State<AuthenticationCard> {
             ),
             SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.only(left: 15, right: 20, bottom: 20),
+              padding: const EdgeInsets.only(left: 0, right: 5, bottom: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -182,19 +182,7 @@ class _AuthenticationCardState extends State<AuthenticationCard> {
                     }
                   },
                 ),
-                SizedBox(width: 45),
-                SignupButton(
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      print('validated');
-                      Navigator.pushNamed(context, RegistrationRoute,
-                          arguments: RegistrationArguments(
-                              _emailController.text, _passwordController.text));
-                    } else {
-                      Text('Error, Something went wrong!');
-                    }
-                  },
-                )
+                
               ],
             )
           ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/components/text_model.dart';
 
 class AuthenticationTitle extends StatelessWidget {
@@ -8,10 +7,14 @@ class AuthenticationTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10, left: 25, right: 25),
+      padding: const EdgeInsets.only(bottom: 25),
       child: TextModel(
-        data: 'WELCOME, PLEASE LOGIN TO YOUR ACCOUNT',
-        style: oblioTheme.textTheme.subtitle1!,
+        data: 'Welcome Home',
+        style: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            color: Colors.grey[800]),
         textAlign: TextAlign.center,
         textDirection: TextDirection.ltr,
       ),

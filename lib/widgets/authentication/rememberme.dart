@@ -23,8 +23,11 @@ class RememberMe extends StatelessWidget {
           onChanged: onChanged,
         ),
         TextModel(
-            data: 'REMEMBER ME',
-            style: oblioTheme.textTheme.overline!,
+            data: 'Remember me',
+            style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 12,
+                fontWeight: FontWeight.w400),
             textAlign: TextAlign.left,
             textDirection: TextDirection.ltr)
       ],

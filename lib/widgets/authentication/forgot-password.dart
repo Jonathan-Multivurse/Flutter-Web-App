@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/components/text_model.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -14,8 +13,12 @@ class ForgotPassword extends StatelessWidget {
       hoverColor: Colors.transparent,
       highlightColor: Colors.transparent,
       child: TextModel(
-          data: 'FORGOT PASSWORD',
-          style: oblioTheme.textTheme.overline!,
+          data: 'Forgot password',
+          style: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: 12,
+            fontWeight: FontWeight.w400
+          ),
           textAlign: TextAlign.left,
           textDirection: TextDirection.ltr),
     );

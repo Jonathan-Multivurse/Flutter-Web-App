@@ -9,8 +9,8 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SecondaryButtonModel(
-      height: 40,
-      width: 125,
+      height: 45,
+      width: 300,
       padding: EdgeInsets.all(0),
       name: 'SIGN IN',
       textStyle: oblioTheme.textTheme.button!,

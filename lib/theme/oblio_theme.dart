@@ -297,9 +297,9 @@ final ThemeData oblioTheme = ThemeData(
   // checkbox theme
 
   checkboxTheme: CheckboxThemeData(
-      fillColor: MaterialStateColor.resolveWith((states) => CompanyColors.red[500]!),
+      fillColor: MaterialStateColor.resolveWith((states) => Colors.grey[800]!),
       side: BorderSide(
-          color: CompanyColors.red[500]!, width: 1, style: BorderStyle.solid)),
+          color: Colors.grey[800]!, width: 1, style: BorderStyle.solid)),
 
   // icon theme
   iconTheme: IconThemeData(

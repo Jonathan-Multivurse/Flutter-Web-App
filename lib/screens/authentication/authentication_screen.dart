@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 import 'package:oblio/widgets/authentication/card.dart';
 
@@ -25,19 +26,18 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Visibility(
-            visible: responsiveView(),
-            child: Expanded(
+              visible: responsiveView(),
+              child: Expanded(
                 flex: 3,
                 child: Container(
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                          'lib/assets/images/Registration_Background.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                )),
-          ),
+                      gradient: LinearGradient(
+                          begin: const FractionalOffset(0.0, 0.0),
+                          end: const FractionalOffset(1.0, 0.0),
+                          stops: [0.0, 1.0],
+                          colors: [HexColor('#3f5efb'), HexColor('#fc4646')])),
+                ),
+              )),
           Expanded(
               flex: 4,
               child: Container(
