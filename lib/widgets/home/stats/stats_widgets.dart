@@ -7,7 +7,6 @@ import 'package:oblio/widgets/home/stats/stats_ranks.dart';
 import 'package:oblio/widgets/home/stats/stats_avatar.dart';
 import 'package:oblio/widgets/home/stats/stats_bottom_data.dart';
 import 'package:oblio/widgets/home/stats/stats_tasks.dart';
-import 'package:oblio/widgets/home/stats/stats_team_chip.dart';
 
 class StatsWidgets extends StatelessWidget {
   const StatsWidgets({Key? key}) : super(key: key);
@@ -34,7 +33,6 @@ class StatsWidgets extends StatelessWidget {
                 SizedBox(width: 10),
                 StatsProfileDetails(),
                 Expanded(child: Container()),
-                StatsTeamChip(),
               ],
             ),
           ),

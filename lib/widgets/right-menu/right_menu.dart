@@ -1,3 +1,4 @@
+import 'package:advanced_icon/advanced_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oblio/state/right-menu/right_menu_cubit.dart';
@@ -25,6 +26,7 @@ class _RightMenuState extends State<RightMenu> {
       'tag5',
       'tag6',
       'tag7',
+      'tag8',
     ];
     List<IconData> iconItems = [
       Icons.date_range,
@@ -34,24 +36,17 @@ class _RightMenuState extends State<RightMenu> {
       Icons.add_shopping_cart,
       Icons.email,
       Icons.phone,
+      Icons.bolt,
     ];
-    List<HexColor> hoverItems = [
-      HexColor('#435BD9'),
-      HexColor('#FA4583'),
-      HexColor('#5F78E4'),
-      HexColor('#FDC173'),
-      HexColor('#0EBB6A'),
-      HexColor('#711BEF'),
-      HexColor('#FDAF4C'),
-    ];
-    List<HexColor> colorItems = [
-      HexColor('#435BD9'),
-      HexColor('#FA4583'),
-      HexColor('#5F78E4'),
-      HexColor('#FDC173'),
-      HexColor('#0EBB6A'),
-      HexColor('#711BEF'),
-      HexColor('#FDAF4C'),
+    List<Color> colorItems = [
+      Colors.grey[200]!,
+      Colors.grey[200]!,
+      Colors.grey[200]!,
+      Colors.grey[200]!,
+      Colors.grey[200]!,
+      Colors.grey[200]!,
+      Colors.grey[200]!,
+      Colors.grey[200]!,
     ];
 
     return BlocBuilder<RightMenuCubit, String>(
@@ -61,7 +56,7 @@ class _RightMenuState extends State<RightMenu> {
           color: Colors.white,
           child: Container(
             width: 75,
-            padding: EdgeInsets.only(top: 20),
+            padding: EdgeInsets.only(top: 10),
             child: ListView.builder(
               itemCount: iconItems.length,
               itemBuilder: (context, index) {
@@ -82,22 +77,23 @@ class _RightMenuState extends State<RightMenu> {
                     return colorItems[5];
                   } else if (menuState == 'phone' && index == 6) {
                     return colorItems[6];
+                  } else if (menuState == 'bolt' && index == 7) {
+                    return colorItems[7];
                   } else {
                     return Colors.grey[100];
                   }
                 }
 
-
                 return Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(9),
                     child: FabButtonModel(
                       tag: tagItems[index],
                       hover: hover()!,
-                      elevation: 0,
+                      elevation: 0.5,
                       hoverElevation: 0.0,
                       mini: true,
                       background: menuState == ''
-                          ? Colors.grey[50]!
+                          ? Colors.white
                           : menuState == 'calendar' && index == 0
                               ? colorItems[0]
                               : menuState == 'task' && index == 1
@@ -114,29 +110,79 @@ class _RightMenuState extends State<RightMenu> {
                                                   : menuState == 'phone' &&
                                                           index == 6
                                                       ? colorItems[6]
-                                                      : oblioTheme
-                                                          .backgroundColor,
-                      child: Icon(iconItems[index],
-                          color: menuState == ''
-                              ? colorItems[index]
+                                                      : menuState == 'bolt' &&
+                                                              index == 7
+                                                          ? colorItems[7]
+                                                          : Colors.white,
+                      child: AdvancedIcon(
+                        icon: iconItems[index],
+                        color: Colors.indigo,
+                        gradient: LinearGradient(
+                          stops: [0.0, 1.0],
+                          colors: menuState == ''
+                              ? <Color>[
+                                  HexColor('#3f5efb'),
+                                  HexColor('#ad5092')
+                                ]
                               : menuState == 'calendar' && index == 0
-                                  ? Colors.white
+                                  ? <Color>[
+                                      HexColor('#3f5efb'),
+                                      HexColor('#ad5092')
+                                    ]
                                   : menuState == 'task' && index == 1
-                                      ? Colors.white
+                                      ? <Color>[
+                                          HexColor('#3f5efb'),
+                                          HexColor('#ad5092')
+                                        ]
                                       : menuState == 'image' && index == 2
-                                          ? Colors.white
+                                          ? <Color>[
+                                              HexColor('#3f5efb'),
+                                              HexColor('#ad5092')
+                                            ]
                                           : menuState == 'account' && index == 3
-                                              ? Colors.white
+                                              ? <Color>[
+                                                  HexColor('#3f5efb'),
+                                                  HexColor('#ad5092')
+                                                ]
                                               : menuState == 'cart' &&
                                                       index == 4
-                                                  ? Colors.white
+                                                  ? <Color>[
+                                                      HexColor('#3f5efb'),
+                                                      HexColor('#ad5092')
+                                                    ]
                                                   : menuState == 'email' &&
                                                           index == 5
-                                                      ? Colors.white
+                                                      ? <Color>[
+                                                          HexColor('#3f5efb'),
+                                                          HexColor('#ad5092')
+                                                        ]
                                                       : menuState == 'phone' &&
                                                               index == 6
-                                                          ? Colors.white
-                                                          : colorItems[index]),
+                                                          ? <Color>[
+                                                              HexColor(
+                                                                  '#3f5efb'),
+                                                              HexColor(
+                                                                  '#ad5092')
+                                                            ]
+                                                          : menuState ==
+                                                                      'bolt' &&
+                                                                  index == 7
+                                                              ? <Color>[
+                                                                  HexColor(
+                                                                      '#3f5efb'),
+                                                                  HexColor(
+                                                                      '#ad5092')
+                                                                ]
+                                                              : <Color>[
+                                                                  HexColor(
+                                                                      '#3f5efb'),
+                                                                  HexColor(
+                                                                      '#ad5092')
+                                                                ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                      ),
                       onPressed: () {
                         context.read<RightWindowCubit>().show();
                         index == 0
@@ -157,9 +203,13 @@ class _RightMenuState extends State<RightMenu> {
                                                 ? context
                                                     .read<RightMenuCubit>()
                                                     .email()
-                                                : context
-                                                    .read<RightMenuCubit>()
-                                                    .phone();
+                                                : index == 6
+                                                    ? context
+                                                        .read<RightMenuCubit>()
+                                                        .phone()
+                                                    : context
+                                                        .read<RightMenuCubit>()
+                                                        .bolt();
                       },
                     ));
               },

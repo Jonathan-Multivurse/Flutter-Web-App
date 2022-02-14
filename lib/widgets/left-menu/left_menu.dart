@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:oblio/state/collapse/collapse_cubit.dart';
 import 'package:oblio/state/left-menu/left_menu_cubit.dart';
 import 'package:oblio/components/tile_model.dart';
@@ -21,28 +22,24 @@ class _LeftMenuState extends State<LeftMenu> {
     return BlocBuilder<CollapseCubit, bool>(
       builder: (context, collapseState) {
         List<IconData> iconItems = [
-          Icons.dashboard,
-          Icons.calendar_today,
-          Icons.assignment,
-          Icons.assignment_ind,
-          Icons.attach_money,
-          Icons.business,
-          Icons.contacts,
-          Icons.assessment,
-          Icons.perm_media,
-          Icons.autorenew,
-          Icons.shopping_cart,
-          Icons.people,
+          Icons.door_sliding,
+          Icons.light,
+          MdiIcons.handBackLeft,
+          MdiIcons.scent,
+          MdiIcons.foodVariant,
+          Icons.speaker,
+          Icons.security_outlined,
+          Icons.circle_outlined
         ];
         List<String> navItems = [
           "Lobby",
-          "Placeholder",
-          "Placeholder",
-          "Placeholder",
-          "Placeholder",
-          "Placeholder",
-          "Placeholder",
-          "Placeholder",
+          "Light",
+          "Texture",
+          "Aroma",
+          "Meal",
+          "Sound",
+          "Safety",
+          "Care",
         ];
 
         var device = MediaQuery.of(context).size;
@@ -86,8 +83,7 @@ class _LeftMenuState extends State<LeftMenu> {
                               visible: collapsedTile(),
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 32),
-                                child: GradientText(
-                                    navItems[index].toString(),
+                                child: GradientText(navItems[index].toString(),
                                     style: TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w300,

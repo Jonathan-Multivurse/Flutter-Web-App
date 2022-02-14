@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:oblio/widgets/header/create.dart';
 import 'package:oblio/widgets/header/header_avatar.dart';
 import 'package:oblio/widgets/header/header_logo.dart';
 import 'package:oblio/widgets/header/menu.dart';
 import 'package:oblio/widgets/header/notification.dart';
 import 'package:oblio/widgets/header/search.dart';
 import 'package:oblio/widgets/header/settings.dart';
+import 'package:oblio/widgets/header/upload.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -17,7 +19,7 @@ class HomeHeader extends StatelessWidget {
     var device = MediaQuery.of(context).size;
     var width = device.width;
     logoVisibility() => width > 900 ? true : false;
-    buttonVisibility() => width > 750 ? true : false;
+    buttonVisibility() => width > 950 ? true : false;
     leading() => width < 900 ? 70.0 : 250.0;
     return Container(
       decoration: BoxDecoration(
@@ -64,6 +66,20 @@ class HomeHeader extends StatelessWidget {
           ],
         ),
         actions: [
+          Visibility(
+              visible: buttonVisibility(),
+              child: CreateButton(onPressed: () {})),
+          Visibility(
+            visible: buttonVisibility(),
+            child: SizedBox(width: 20),
+          ),
+          Visibility(
+              visible: buttonVisibility(),
+              child: UploadButton(onPressed: () {})),
+          Visibility(
+            visible: buttonVisibility(),
+            child: SizedBox(width: 20),
+          ),
           Visibility(
               visible: buttonVisibility(),
               child: NotificationButton(onPressed: () {})),

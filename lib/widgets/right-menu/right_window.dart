@@ -18,7 +18,7 @@ class RightWindow extends StatelessWidget {
               visible: windowState,
               child: Container(
                 width: 400,
-                color: Colors.grey[50],
+                color: Colors.grey[100],
                 alignment: Alignment.center,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,

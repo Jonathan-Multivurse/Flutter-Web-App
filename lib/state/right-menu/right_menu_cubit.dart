@@ -10,4 +10,5 @@ class RightMenuCubit extends Cubit<String> {
   void cart() => emit('cart');
   void email() => emit('email');
   void phone() => emit('phone');
+  void bolt() => emit('bolt');
 }

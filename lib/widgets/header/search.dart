@@ -20,16 +20,16 @@ class SearchInput extends StatelessWidget {
     var width = device.width;
 
     dynamicWidth() {
-      if (width > 750 && width < 1200) {
-        return width * 0.40;
-      } else if (width > 1200 && width < 1400) {
-        return width * 0.40;
+      if (width > 750 && width < 950) {
+        return width * 0.5;
+      } else if (width >= 950 && width < 1400) {
+        return width * 0.35;
       } else if (width > 1400) {
         return width * 0.50;
       } else if (width <= 750) {
-        return width * 0.4;
+        return width * 0.5;
       } else if (width <= 450) {
-        return width * 0.4;
+        return width * 0.5;
       }
     }
 
