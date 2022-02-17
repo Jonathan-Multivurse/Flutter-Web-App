@@ -7,17 +7,22 @@ class HeaderAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var device = MediaQuery.of(context).size;
+    var height = device.height;
+    var width = device.width;
     return InkResponse(
       onTap: () {
         showDialog(
-          barrierColor: Colors.transparent,
+            barrierColor: Colors.transparent,
             context: context,
             builder: (BuildContext context) {
               return Container(
-                padding: EdgeInsets.only(top: 70, right: 15),
-                alignment: Alignment.topRight,
-                child: AccountCard()
-              );
+                  padding: EdgeInsets.only(top: 100, right: 10),
+                  alignment: Alignment.topCenter,
+                  child: AccountCard(
+                    height: height * 0.7,
+                    width: width * 0.5,
+                  ));
             });
       },
       hoverColor: Colors.transparent,

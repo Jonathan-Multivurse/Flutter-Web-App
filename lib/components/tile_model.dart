@@ -38,7 +38,7 @@ class TileModel extends StatelessWidget {
           selected: selected,
           focusColor: Colors.transparent,
           tileColor: Colors.transparent,
-          selectedTileColor: Colors.grey[300],
+          selectedTileColor: Colors.transparent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 topRight: Radius.circular(50),

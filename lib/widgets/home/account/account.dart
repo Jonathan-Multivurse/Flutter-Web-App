@@ -9,28 +9,25 @@ import 'package:oblio/components/text_model.dart';
 import 'package:oblio/widgets/home/account/account_footer.dart';
 
 class AccountCard extends StatelessWidget {
-  const AccountCard({Key? key}) : super(key: key);
+  final double height;
+  final double width;
+  const AccountCard({Key? key, required this.height, required this.width})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Material(
+      elevation: 1,
+      borderRadius: BorderRadius.circular(10),
       child: Container(
-          padding: EdgeInsets.all(20),
-          height: 425,
-          width: 300,
+          padding: EdgeInsets.only(top: 100, right: 10),
+          height: height,
+          width: width,
           decoration: BoxDecoration(
-            color: oblioTheme.cardColor,
+            color: Colors.white,
             borderRadius: BorderRadius.all(
               Radius.circular(10),
             ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.blueGrey.withOpacity(0.1),
-                spreadRadius: 10,
-                blurRadius: 20,
-                offset: Offset(0, 3),
-              ),
-            ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

@@ -13,6 +13,7 @@ class SearchInputModel extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final String? Function(String?)? validator;
   final TextEditingController controller;
+  final void Function()? onPressed;
 
   SearchInputModel({
     Key? key,
@@ -27,6 +28,7 @@ class SearchInputModel extends StatelessWidget {
     required this.padding,
     this.validator,
     required this.controller,
+    required this.onPressed
   }) : super(key: key);
 
   @override
@@ -40,6 +42,7 @@ class SearchInputModel extends StatelessWidget {
             obscureText: false,
             style: style,
             cursorColor: cursorColor,
+            onTap: onPressed,
             decoration: InputDecoration(
               floatingLabelBehavior: FloatingLabelBehavior.never,
               isDense: false,

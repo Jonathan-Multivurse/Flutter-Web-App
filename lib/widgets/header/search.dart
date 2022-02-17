@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oblio/theme/oblio_theme.dart';
 
 import 'package:oblio/components/search_input.dart';
+import 'package:oblio/widgets/header/portal_card.dart';
 
 class SearchInput extends StatelessWidget {
   final bool obscure;
@@ -17,6 +18,7 @@ class SearchInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var device = MediaQuery.of(context).size;
+    var height = device.height;
     var width = device.width;
 
     dynamicWidth() {
@@ -43,6 +45,20 @@ class SearchInput extends StatelessWidget {
         cursorColor: oblioTheme.textSelectionTheme.cursorColor!,
         fillColor: Colors.white,
         label: label,
+        onPressed: () {
+          showDialog(
+              barrierColor: Colors.transparent,
+              context: context,
+              builder: (BuildContext context) {
+                return Container(
+                    padding: EdgeInsets.only(top: 100, right: 10),
+                    alignment: Alignment.topCenter,
+                    child: PortalCard(
+                      height: height * 0.70,
+                      width: width * 0.5,
+                    ));
+              });
+        },
         prefixIcon: prefixIcon,
         validator: (String) {},
         controller: TextEditingController(),

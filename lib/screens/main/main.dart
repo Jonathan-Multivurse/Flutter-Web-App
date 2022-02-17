@@ -54,10 +54,14 @@ class MainScreen extends StatelessWidget {
           }
         }
 
+        var device = MediaQuery.of(context).size;
+        var height = device.height;
+        var width = device.width;
+
         return WillPopScope(
           onWillPop: () async => false,
           child: Scaffold(
-            backgroundColor: oblioTheme.canvasColor,
+            backgroundColor: Colors.grey[100],
             drawerScrimColor: Colors.transparent,
             drawer: Drawer(
                 backgroundColor: Colors.grey.withOpacity(0.1),
@@ -75,9 +79,34 @@ class MainScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [RightMenu(), RightWindow()],
+                Flexible(
+                  flex: 1,
+                  child: SingleChildScrollView(
+                    child: Container(
+                      margin: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10),
+                      height: height * 0.90,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Wrap(
+                        alignment: WrapAlignment.center,
+                        direction: Axis.horizontal,
+                        textDirection: TextDirection.ltr,
+                        spacing: 20,
+                        children: [
+                          Container(),
+                          Container(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [RightMenu(), RightWindow()],
+                  ),
                 ),
               ],
             ),

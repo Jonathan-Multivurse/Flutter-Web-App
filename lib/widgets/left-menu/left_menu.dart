@@ -25,21 +25,28 @@ class _LeftMenuState extends State<LeftMenu> {
           Icons.door_sliding,
           Icons.light,
           MdiIcons.handBackLeft,
+          MdiIcons.fire,
           MdiIcons.scent,
-          MdiIcons.foodVariant,
+          Icons.air,
           Icons.speaker,
+          MdiIcons.blur,
           Icons.security_outlined,
-          Icons.circle_outlined
+          Icons.motion_photos_on,
+          MdiIcons.recycle
         ];
         List<String> navItems = [
           "Lobby",
           "Light",
           "Texture",
+          "Heat",
           "Aroma",
-          "Meal",
+          "Airflow",
           "Sound",
+          "Motion",
           "Safety",
-          "Care",
+          "Hygiene",
+          "Waste"
+          
         ];
 
         var device = MediaQuery.of(context).size;
